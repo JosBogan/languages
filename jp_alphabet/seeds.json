@@ -1,0 +1,416 @@
+[
+{
+  "model": "jp_alphabet.character",
+  "pk": 1,
+  "fields": {
+    "character": "\u3042",
+    "translation": "a",
+    "row": 1
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 2,
+  "fields": {
+    "character": "\u3044",
+    "translation": "i",
+    "row": 1
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 3,
+  "fields": {
+    "character": "\u3046",
+    "translation": "u",
+    "row": 1
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 4,
+  "fields": {
+    "character": "\u3048",
+    "translation": "e",
+    "row": 1
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 5,
+  "fields": {
+    "character": "\u304a",
+    "translation": "o",
+    "row": 1
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 6,
+  "fields": {
+    "character": "\u304b",
+    "translation": "ka",
+    "row": 2
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 7,
+  "fields": {
+    "character": "\u304d",
+    "translation": "ki",
+    "row": 2
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 8,
+  "fields": {
+    "character": "\u304f",
+    "translation": "ku",
+    "row": 2
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 9,
+  "fields": {
+    "character": "\u3051",
+    "translation": "ke",
+    "row": 2
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 10,
+  "fields": {
+    "character": "\u3053",
+    "translation": "ko",
+    "row": 2
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 11,
+  "fields": {
+    "character": "\u3055",
+    "translation": "sa",
+    "row": 3
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 12,
+  "fields": {
+    "character": "\u3057",
+    "translation": "shi",
+    "row": 3
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 13,
+  "fields": {
+    "character": "\u3059",
+    "translation": "su",
+    "row": 3
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 14,
+  "fields": {
+    "character": "\u305b",
+    "translation": "se",
+    "row": 3
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 15,
+  "fields": {
+    "character": "\u305d",
+    "translation": "so",
+    "row": 3
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 16,
+  "fields": {
+    "character": "\u305f",
+    "translation": "ta",
+    "row": 4
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 17,
+  "fields": {
+    "character": "\u3061",
+    "translation": "chi",
+    "row": 4
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 18,
+  "fields": {
+    "character": "\u3064",
+    "translation": "tsu",
+    "row": 4
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 19,
+  "fields": {
+    "character": "\u3066",
+    "translation": "te",
+    "row": 4
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 20,
+  "fields": {
+    "character": "\u3068",
+    "translation": "to",
+    "row": 4
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 21,
+  "fields": {
+    "character": "\u306a",
+    "translation": "na",
+    "row": 5
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 22,
+  "fields": {
+    "character": "\u306b",
+    "translation": "ni",
+    "row": 5
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 23,
+  "fields": {
+    "character": "\u306c",
+    "translation": "nu",
+    "row": 5
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 24,
+  "fields": {
+    "character": "\u306d",
+    "translation": "ne",
+    "row": 5
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 25,
+  "fields": {
+    "character": "\u306e",
+    "translation": "no",
+    "row": 5
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 26,
+  "fields": {
+    "character": "\u306f",
+    "translation": "ha",
+    "row": 6
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 27,
+  "fields": {
+    "character": "\u3072",
+    "translation": "hi",
+    "row": 6
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 28,
+  "fields": {
+    "character": "\u3075",
+    "translation": "fu",
+    "row": 6
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 29,
+  "fields": {
+    "character": "\u3078",
+    "translation": "he",
+    "row": 6
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 30,
+  "fields": {
+    "character": "\u307b",
+    "translation": "ho",
+    "row": 6
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 31,
+  "fields": {
+    "character": "\u307e",
+    "translation": "ma",
+    "row": 7
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 32,
+  "fields": {
+    "character": "\u307f",
+    "translation": "mi",
+    "row": 7
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 33,
+  "fields": {
+    "character": "\u3080",
+    "translation": "mu",
+    "row": 7
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 34,
+  "fields": {
+    "character": "\u3081",
+    "translation": "me",
+    "row": 7
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 35,
+  "fields": {
+    "character": "\u3082",
+    "translation": "mo",
+    "row": 7
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 36,
+  "fields": {
+    "character": "\u3084",
+    "translation": "ya",
+    "row": 8
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 37,
+  "fields": {
+    "character": "\u3086",
+    "translation": "yu",
+    "row": 8
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 38,
+  "fields": {
+    "character": "\u3088",
+    "translation": "yo",
+    "row": 8
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 39,
+  "fields": {
+    "character": "\u3089",
+    "translation": "ra",
+    "row": 9
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 40,
+  "fields": {
+    "character": "\u308a",
+    "translation": "ri",
+    "row": 9
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 41,
+  "fields": {
+    "character": "\u308b",
+    "translation": "ru",
+    "row": 9
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 42,
+  "fields": {
+    "character": "\u308c",
+    "translation": "re",
+    "row": 9
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 43,
+  "fields": {
+    "character": "\u308d",
+    "translation": "ro",
+    "row": 9
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 44,
+  "fields": {
+    "character": "\u308f",
+    "translation": "wa",
+    "row": 10
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 45,
+  "fields": {
+    "character": "\u3092",
+    "translation": "wo",
+    "row": 10
+  }
+},
+{
+  "model": "jp_alphabet.character",
+  "pk": 46,
+  "fields": {
+    "character": "\u3093",
+    "translation": "n",
+    "row": 11
+  }
+}
+]
