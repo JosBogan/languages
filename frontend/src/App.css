@@ -4,6 +4,23 @@
   background-color: whitesmoke;
 }
 
+.page_container {
+  display: flex;
+}
+
+.sidebar_wrapper {
+  background-color: white;
+  min-width: 300px;
+}
+
+
+
+
+
+
+
+/* Alphabet */
+
 .fa_icon {
   color: gray;
   font-size: 15px;
@@ -37,44 +54,7 @@
   margin: 0 50px 0 0;
 }
 
-.alphabet_row_selected_hover::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 3px solid #23D160;
-  /* -webkit-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
-  -moz-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
-  box-shadow: 0px 0px 7px 4px rgba(107,107,255,1); */
-  border-radius: 5px;
-  padding: 0 20px;
-  left: -20px;
-  z-index: 1;
-}
-
-.alphabet_row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.alphabet_row_selected_hover::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  border: 3px solid #23D160;
-  /* -webkit-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
-  -moz-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
-  box-shadow: 0px 0px 7px 4px rgba(107,107,255,1); */
-  border-radius: 5px;
-  padding: 0 20px;
-  left: -20px;
-  z-index: 1;
-}
-
-/* .alphabet_row_container:hover::before {
+/* .alphabet_row_selected_hover::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -88,6 +68,51 @@
   left: -20px;
   z-index: 1;
 } */
+
+.alphabet_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+/* 
+.alphabet_row_selected_hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid #23D160;
+  -webkit-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
+  -moz-box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
+  box-shadow: 0px 0px 7px 4px rgba(107,107,255,1);
+  border-radius: 5px;
+  padding: 0 20px;
+  left: -20px;
+  z-index: 1;
+} */
+
+.alphabet_row_container:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid #23D160;
+  /* -webkit-box-shadow: 0px 0px 7px 4px #23D160;
+  -moz-box-shadow: 0px 0px 7px 4px #23D160;
+  box-shadow: 0px 0px 7px 4px #23D160; */
+  border-radius: 5px;
+  padding: 0 20px;
+  left: -20px;
+  /* z-index: 1; */
+}
+
+.alphabet_character_container {
+  pointer-events: all;
+}
+
+.alphabet_character_container:hover {
+  background-color: blue;
+}
 
 .alphabet_character {
   font-size: 30px;
