@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-regular-svg-icons'
 
+import Next from '../common/Next'
+
 class Alphabet extends React.Component {
 
   state = {
@@ -46,70 +48,51 @@ class Alphabet extends React.Component {
     }
   }
 
-  // rowSelectHoverEvent = (event) => {
-  //   event.stopPropagation()
-  //   switch (event.type) {
-  //     case 'mouseenter':
-  //       console.log(event.target.getAttribute('name'))
-  //         this.setState({ rowHovered: event.target.getAttribute('name') })
-  //       break
-  //     case 'mouseleave':
-  //         this.setState({ rowHovered: null })
-  //       break
-  //   }
-  // }
-
   render() {
-    // if (!this.state.alphabet) return
-    // console.log(this.state.rowHovered)
     return (
-      // <div className="App">
-        <section className="alphabet_container">
-          <div className="alphabet_container_inner">
-            {this.state.alphabet.map(row => {
-              return (
-                <div 
-                  className="alphabet_row_container"
-                  key={row[0].row}
+      <>
+        <div className="alphabet_container_inner">
+          {this.state.alphabet.map(row => {
+            return (
+              <div 
+                className="alphabet_row_container"
+                key={row[0].row}
+                name={row[0].row}
+                onClick={this.handleRowSelect}
+              >
+                
+                <div
+                  className="alphabet_row_selected"
                   name={row[0].row}
-                  onClick={this.handleRowSelect}
                 >
-                  {/* {console.log(row[0].row)} */}
-                  <div
-                    // className={`alphabet_row_selected ${parseInt(this.state.rowHovered) === parseInt(row[0].row) && 'alphabet_row_selected_hover'}`}
-                    className="alphabet_row_selected"
-                    name={row[0].row}
-                    // onMouseEnter={this.rowSelectHoverEvent}
-                    // onMouseLeave={this.rowSelectHoverEvent}
-                  >
-                    <FontAwesomeIcon 
-                      className="fa_icon" 
-                      icon={parseInt(row[0].row) in this.state.rowsSelected ? faCheck : faCircle} 
-                    />
-                  </div>
-                  <div
-                    className="alphabet_row"
-                  >{
-                    row.map(letter => (
-                      <div
-                        key={letter.character}
-                        className="alphabet_character_container"
-                      >
-                        <div
-                          className="alphabet_character"
-                        >{letter.character}</div>
-                        <div
-                          className="alphabet_translation"
-                        >{letter.translation}</div>
-                      </div>
-                    ))
-                  }</div>
+                  <FontAwesomeIcon 
+                    className="fa_icon" 
+                    icon={parseInt(row[0].row) in this.state.rowsSelected ? faCheck : faCircle} 
+                  />
                 </div>
-              )
-            })}
-          </div>
-        </section>
-      // </div>
+                <div
+                  className="alphabet_row"
+                >{
+                  row.map(letter => (
+                    <div
+                      key={letter.character}
+                      className="alphabet_character_container"
+                    >
+                      <div
+                        className="alphabet_character"
+                      >{letter.character}</div>
+                      <div
+                        className="alphabet_translation"
+                      >{letter.translation}</div>
+                    </div>
+                  ))
+                }</div>
+              </div>
+            )
+          })}
+        </div>
+        <Next rowsSelected={this.state.rowsSelected}/>
+      </>
     )
   }
 }

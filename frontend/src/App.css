@@ -14,10 +14,27 @@
 }
 
 
+/* Common */
 
 
+.next_button {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translate(-50% 0);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: green;
+}
 
+/* Answerbox */
 
+/* Correct　Answer */
+
+.correct_answer {
+  background-color: #23D160;
+}
 
 /* Alphabet */
 
