@@ -91,7 +91,7 @@ class Alphabet extends React.Component {
             )
           })}
         </div>
-        <Next rowsSelected={this.state.rowsSelected}/>
+        {Object.keys(this.state.rowsSelected).length !== 0 && <Next rowsSelected={this.state.rowsSelected}/>}
       </>
     )
   }

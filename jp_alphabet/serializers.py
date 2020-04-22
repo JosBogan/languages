@@ -3,6 +3,6 @@ from .models import Character
 
 class CharacterSerializer(serializers.ModelSerializer):
 
-    class Meta():
+    class Meta:
         model = Character
         fields = '__all__'
