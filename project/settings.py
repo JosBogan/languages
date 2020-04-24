@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'jp_alphabet',
     'subjects',
-    'modules'
+    'modules',
+    'chapters',
+    'chunks',
+    'pages'
 ]
 
 MIDDLEWARE = [

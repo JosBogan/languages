@@ -10,6 +10,7 @@ function Module(props) {
         onClick={props.onClick}
         open={props.open}
         title={true}
+        text={props.data.name}
       />
       <div 
         className="module_dropdown"
@@ -21,9 +22,19 @@ function Module(props) {
         <div 
           className="module_dropdown_line"
         ></div>
-        <ModuleInner />
-        <ModuleInner />
-        <ModuleInner />
+        {props.data.chunks.map(chunk => {
+          return (
+            <ModuleInner 
+            key={chunk.data_name}
+            text={chunk.name}/>
+          )
+        })}
+        {/* <ModuleInner 
+          text={props.data.name}/>
+        <ModuleInner 
+          text={props.data.name}/>
+        <ModuleInner 
+          text={props.data.name}/> */}
       </div>
     </div>
   )
