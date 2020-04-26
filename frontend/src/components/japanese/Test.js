@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Answerbox from '../common/Answerbox'
-import Back from '../common/Back'
+import Answerbox from '../classroom/common/Answerbox'
+import Back from '../classroom/common/Back'
 
 class Test extends React.Component {
 

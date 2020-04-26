@@ -3,5 +3,5 @@ from .views import ModulesListView, ModuleDetailView
 
 urlpatterns = [
     path('', ModulesListView.as_view()),
-    path('<int:pk>/', ModuleDetailView.as_view()),
+    path('<slug:slug>/', ModuleDetailView.as_view()),
 ]

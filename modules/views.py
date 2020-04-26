@@ -22,9 +22,9 @@ class ModulesListView(APIView):
 
 class ModuleDetailView(APIView):
 
-    def get(self, request, pk):
+    def get(self, request, slug):
         try:
-            module = Module.objects.get(pk=pk)
+            module = Module.objects.get(data_name=slug)
             serialized_module = ModuleSerializer(module)
             return Response(serialized_module.data)
         except Module.DoesNotExist:

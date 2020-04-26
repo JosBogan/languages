@@ -20,5 +20,6 @@ urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/lang/jp/alpha/', include('jp_alphabet.urls')),
     path('api/subjects/', include('subjects.urls')),
-    path('api/modules/', include('modules.urls'))
+    path('api/modules/', include('modules.urls')),
+    path('api/chunks/', include('chunks.urls'))
 ]

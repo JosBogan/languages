@@ -8,7 +8,7 @@ import {faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 function Back(props) {
 
   return (
-    <Link to="/alphabet/">
+    <Link to={props.path}>
       <div className="back_button">
         <FontAwesomeIcon className="fa_back" icon={faChevronLeft}/>
       </div>

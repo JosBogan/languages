@@ -9,10 +9,10 @@ function Next(props) {
 
   return (
     <Link to={{
-      pathname: "/alphabet/test",
-      state: {
-        rowsSelected: props.rowsSelected
-      }
+      pathname: `${props.path}`,
+      // state: {
+      //   rowsSelected: props.rowsSelected
+      // }
     }}>
       <div className="next_button">
         <FontAwesomeIcon className="fa_next" icon={faChevronRight}/>
