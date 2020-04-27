@@ -1,15 +1,17 @@
 import React from 'react'
+import Markdown from 'markdown-to-jsx'
+
 import Next from './common/Next'
 import Back from './common/Back'
-import HoverText from './HoverText'
-
-import Markdown from 'markdown-to-jsx'
+import HoverText from './content_components/HoverText'
+import SelectText from './content_components/SelectText'
 
 class PageContent extends React.Component {
 
   state = {
     page: null,
-    textTest: 'OK, now you know how to describe efficiency in basic terms. Now it’s time to get more <HoverText text={technical}/>.↵↵In the rest of the lesson, we’ll cover five **classes of complexity** in algorithms; in other words, break down the “highly efficient,” “pretty good,” and “inefficient” groups that we just discussed. Here they are:↵↵| Highly Efficient | Pretty Good | Inefficient |↵| --- | --- | --- |↵| Constant complexity | Linear complexity | Quadratic complexity |↵| Logarithmic complexity | | Factorial complexity |',
+    textTest: 'OK, now you know how to describe efficiency in basic terms. Now it’s time to get more <HoverText text={technical}/>.↵↵In the rest of the lesson, we’ll cover five **classes of complexity** in algorithms; in other words, break down the “highly efficient,” “pretty good,” and “inefficient” groups that we just discussed.↵↵<SelectText text={[[This is a], [test sentence]]} />↵↵Here they are:↵↵| Highly Efficient | Pretty Good | Inefficient |↵| --- | --- | --- |↵| Constant complexity | Linear complexity | Quadratic complexity |↵| Logarithmic complexity | | Factorial complexity |',
+    selectText: null
   }
 
   componentDidMount() {
@@ -40,6 +42,12 @@ class PageContent extends React.Component {
                   component: HoverText,
                   props: {
                     onHover: this.onHover
+                  }
+                },
+                SelectText: {
+                  component: SelectText,
+                  props: {
+                    onClick: null,
                   }
                 }
               }
