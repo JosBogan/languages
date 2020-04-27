@@ -28,6 +28,7 @@ function Module(props) {
             <Link key={chunk.data_name} to={`${props.params}/${chunk.data_name}/1`}>
               <ModuleInner 
               onModuleClick={props.onModuleClick}
+              title={false}
               text={chunk.name}
               data_name={chunk.data_name}
               open={props.openChunk === chunk.data_name}

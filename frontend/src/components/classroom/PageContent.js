@@ -1,39 +1,53 @@
 import React from 'react'
 import Next from './common/Next'
 import Back from './common/Back'
+import HoverText from './HoverText'
+
+import Markdown from 'markdown-to-jsx'
 
 class PageContent extends React.Component {
 
   state = {
-    page: null
+    page: null,
+    textTest: 'OK, now you know how to describe efficiency in basic terms. Now it’s time to get more <HoverText text={technical}/>.↵↵In the rest of the lesson, we’ll cover five **classes of complexity** in algorithms; in other words, break down the “highly efficient,” “pretty good,” and “inefficient” groups that we just discussed. Here they are:↵↵| Highly Efficient | Pretty Good | Inefficient |↵| --- | --- | --- |↵| Constant complexity | Linear complexity | Quadratic complexity |↵| Logarithmic complexity | | Factorial complexity |',
   }
 
   componentDidMount() {
-    console.log(this.props.match)
-    // document.addEventListener('keydown', this.keyboardPageChange)
+    console.log('mounted')
   }
 
-  // keyboardPageChange = (event) => {
-  //   switch (event.keyCode) {
-  //     case 39:
-  //       this.props.history.push(`${this.props.path}${this.props.page.page_no + 1}`)
-  //       break
-  //     case 37:
-  //       if (this.props.page.page_no === 1) break
-  //       this.props.history.push(`${this.props.path}${this.props.page.page_no - 1}`)
-  //       break
-  //     default:
-  //       break
-  //   }
-  // }
+  onHover = () => {
+    console.log('working')
+  }
+
+  textConversion = (input) => {
+    return input.replace(/↵/g, '\n')
+  }
 
   render(){
     const { page } = this.props 
     return (
       <div>
         {page.page_no !== 1 && <Back path={`${this.props.path}${page.page_no - 1}`}/>}
-        {page.title}
-        {page.content}
+        {/* {page.title}
+        {page.content} */}
+        <div className="content_inner">
+          {page.title && <h1>{page.title}</h1>}
+          <Markdown
+            options={{
+              overrides: {
+                HoverText: {
+                  component: HoverText,
+                  props: {
+                    onHover: this.onHover
+                  }
+                }
+              }
+            }}
+          >
+            {this.textConversion(this.state.textTest)}
+            </Markdown>
+        </div>
         <Next path={`${this.props.path}${page.page_no + 1}`}/>
       </div>
     )

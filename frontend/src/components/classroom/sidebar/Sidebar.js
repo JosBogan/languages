@@ -28,13 +28,13 @@ class Sidebar extends React.Component {
   }
 
   onModuleClick = (event, data_name, title) => {
-    console.log(title, data_name)
-    !title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
+    // console.log(title, data_name)
+    title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
   }
 
   render() {
     if (Object.keys(this.state.module).length === 0) return null
-    console.log(this.state.open)
+    console.log(this.state.open, this.state.openChunk)
     return (
       <div className="sidebar_wrapper">
         <div className="sidebar_inner_wrapper">
