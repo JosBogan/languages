@@ -1,0 +1,53 @@
+.subject_container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Subject Card */
+
+.subject_card_container {
+  width: 340px;
+  height: 200px;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 10px -5px;
+  /* background-repeat: no-repeat; */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.subject_image {
+  background-image: url(../../../assets/japan_hero.jpg);
+  background-position: center;
+  background-size: cover;
+  flex: 1;
+}
+
+.subject_card_header_container {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.subject_card_header {
+  margin-left: 30px;
+  color: black;
+  transition: margin 0.2s;
+  font-size: 16px;
+}
+
+.subject_card_container:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 15px 15px -5px;
+}
+
+/* 
+.subject_card_container:hover .subject_card_header {
+  margin-left: 50px;
+} */

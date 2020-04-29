@@ -1,0 +1,10 @@
+[
+{
+  "model": "subjects.subject",
+  "pk": 1,
+  "fields": {
+    "name": "Japanese",
+    "data_name": "japanese"
+  }
+}
+]

@@ -5,7 +5,7 @@ import axios from 'axios'
 // import headers from './lib/headers'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-regular-svg-icons'
 
 import Next from '../classroom/common/Next'
@@ -50,7 +50,7 @@ class Alphabet extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="alphabet_container_outer">
         <div className="alphabet_container_inner">
           {this.state.alphabet.map(row => {
             return (
@@ -92,7 +92,7 @@ class Alphabet extends React.Component {
           })}
         </div>
         {Object.keys(this.state.rowsSelected).length !== 0 && <Next rowsSelected={this.state.rowsSelected}/>}
-      </>
+      </div>
     )
   }
 }

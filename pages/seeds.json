@@ -1,0 +1,35 @@
+[
+{
+  "model": "pages.page",
+  "pk": 1,
+  "fields": {
+    "data_name": "jp_1_1_1_1",
+    "title": "Declarations",
+    "content": "The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following structure:\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\u306f \\_\\_\\_\\_\\_\\_\u3067\u3059</p><TextComparison highlighted={\u306f|\u3067\u3059} text={[[\"I am a teacher\", \"\u308f\u305f\u3057\u306f\u305b\u3093\u305b\u3044\u3067\u3059\"], [\"Takeshi is a student\", \"\u305f\u3051\u3057\u306f\u304c\u304f\u305b\u3044\u3067\u3059\"], [\"The teacher is english\", \"\u305b\u3093\u305b\u306f\u30a4\u30ae\u30ea\u30b9\u3058\u3093\u3067\u3059\"]]}/> The **topic particle** <span class=\"blue_text\">** \u306f**</span> indicates the topic of the sentence that comes just before. <span class=\"blue_text\">**\u3067\u3059**</span> is a copula verb that means **\"to be\"** or **\"is\"**.\u21b5\u21b5<sup>Note: whilst **\u306f** is ordinarily pronounced **ha**, when used as a particle it is pronounced **wa**</sup>",
+    "chunk": 1,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 2,
+  "fields": {
+    "data_name": "jp_1_1_1_2",
+    "title": "Omission and Context",
+    "content": "In Japanese, **omission** and **context** are both very important. Often in Japanese, people will omit the subject of a sentence so the context of the conversation will imply meaning.\u21b5\u21b5<TextComparison text={[[\"(I am) Japanese\", \"\u306b\u307b\u3093\u3058\u3093\u3067\u3059\"], [\"(I am a) lawyer\", \"\u3079\u3093\u3054\u3057\u3067\u3059\"], [\"(It is) sushi\", \"\u3059\u3057\u3067\u3059\"]]}/>Japanese **does not** have the **definite or indefinite articles** seen in english; a, an, the. Nor does japanese indicate plurality at the end of nouns like in english; tables, cars, etc. Like before, the context of the conversation and other aspects of the grammar indicate these things",
+    "chunk": 1,
+    "page_no": 2
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 4,
+  "fields": {
+    "data_name": "jp_1_1_2_1",
+    "title": "Questions",
+    "content": "In Japanese, a question is indicated by the particle <span class=\"blue_text\">**\u304b**</span> at the end of a sentence. This means that in order to turn a statement into a question, you simply have to add <span class=\"blue_text\">**\u304b**</span> to the end.\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\u304b</p>\u21b5\u21b5<TextComparison highlighted={\u304b} text={[[\"\u308a\u3093\u3054\u3067\u3059\", \"\u308a\u3093\u3054\u3067\u3059\u304b\"], [\"It is an apple\", \"Is it an apple?\"]]}/>",
+    "chunk": 2,
+    "page_no": 1
+  }
+}
+]

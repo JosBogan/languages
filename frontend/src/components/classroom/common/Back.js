@@ -9,7 +9,12 @@ function Back(props) {
 
   return (
     <Link to={props.path}>
-      <div className="back_button">
+      <div 
+        className="back_button"
+        style={{
+          left: props.collapsed ? '50px' : '350px'
+        }}
+      >
         <FontAwesomeIcon className="fa_back" icon={faChevronLeft}/>
       </div>
     </Link>

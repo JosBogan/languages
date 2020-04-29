@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Switch, Route } from 'react-router-dom'
 
 import PageContent from './PageContent'
+import Alphabet from '../japanese/Alphabet'
 
 class Page extends React.Component {
 
@@ -14,7 +15,7 @@ class Page extends React.Component {
   getChunk = async () => {
     try {
       const res = await axios.get(`/api/chunks/${this.props.match.params.chunk_name}`)
-      console.log(res.data)
+      // console.log(res.data)
       this.setState({ chunk: res.data })
     } catch (err){
       console.log(err)
@@ -23,11 +24,11 @@ class Page extends React.Component {
 
   async componentDidMount() {
     this.getChunk()
-    console.log(this.props.match)
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.chunk_name !== prevProps.match.params.chunk_name) {
+      this.setState({ chunk: null })
       this.getChunk()
     }
   }
@@ -37,13 +38,25 @@ class Page extends React.Component {
     return (
       <div>
         <Switch>
-          {this.state.chunk.pages.map(page => (
+          {this.state.chunk.pages.length ? this.state.chunk.pages.map(page => (
             <Route 
               key={page.data_name}
-              path={`${this.props.match.url}/${page.id}`} 
-              render={(props) => <PageContent {...props} page={page} path={`${this.props.match.url}/`}/>}
+              path={`${this.props.match.url}/${page.page_no}`} 
+              render={(props) => (
+                <PageContent {...props} 
+                  page={page} 
+                  pathURL={`${this.props.match.url}/`} 
+                  collapsed={this.props.collapsed}
+                  totalPages={this.state.chunk.pages.length}
+                />
+              )}
             />
-            ))}
+            )) : 
+            <Route 
+              path={`${this.props.match.url}`}
+              component={Alphabet} 
+            />
+          }
         </Switch>
       </div>
     )

@@ -17,7 +17,6 @@ class ModulesListView(APIView):
     def get(self, _request):
         modules = Module.objects.all()
         serialized_modules = ModuleSerializer(modules, many=True)
-        print(serialized_modules.data)
         return Response(serialized_modules.data)
 
 class ModuleDetailView(APIView):

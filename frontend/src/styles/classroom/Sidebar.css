@@ -1,0 +1,133 @@
+.sidebar_wrapper {
+  background-color: var(--secondary);
+  /* padding: 30px 20px 30px 40px; */
+  transition: all 0.2s;
+  width: 300px;
+  z-index: 1;
+  color: white;
+  -webkit-box-shadow: 26px 0px 82px -33px rgba(0,0,0,0.1);
+  -moz-box-shadow: 26px 0px 82px -33px rgba(0,0,0,0.1);
+  box-shadow: 26px 0px 82px -33px rgba(0, 0, 0, 0.1);
+  /* overflow: scroll; */
+}
+
+.sidebar_inner_wrapper {
+  /* position: relative; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.all_module_container {
+  padding-left: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: scroll;
+}
+
+.module_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  font-size: 17px;
+  user-select: none;
+}
+
+.module_container * {
+  pointer-events: none;
+}
+
+.module_container_open .module_circle {
+  background: white;
+}
+
+.module_container_open .module_line {
+  width: 50px;
+}
+
+.module_container:hover .module_circle {
+  background: white;
+}
+
+.module_container:hover .module_line {
+  min-width: 50px;
+}
+
+.module_circle {
+  height: 1em;
+  min-width: 1em;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all 0.1s;
+  background: var(--secondary);
+  z-index: 1;
+}
+
+.module_line {
+  height: 1px;
+  min-width: 20px;
+  background-color: white;
+  transition: all 0.1s;
+}
+
+.module_name {
+  /* background-color: white; */
+  color: white;
+
+}
+
+.module_dropdown {
+  position: relative;
+  margin: 0 0 0 2.5em;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.module_dropdown_line {
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 0.5em);
+  left: 7px;
+  background-color: white;
+}
+
+.sidebar_collapse {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  transition: left 0.2s, transform 0.2s, color 0.1s;
+  top: 30px;
+  z-index: 10;
+  color: gray;
+}
+
+.sidebar_collapse:hover {
+  color: rgb(167, 167, 167);
+}
+
+.sidebar_nav_wrapper {
+  background-color: var(--primary);;
+  border-bottom: 1px solid white;
+  padding: 30px 20px 20px 20px;
+}
+
+.sidebar_nav {
+  display: flex;
+  justify-content: space-evenly;
+  /* border-bottom: 1px solid rgb(206, 206, 206); */
+  /* padding-bottom: 20px; */
+}
+
+.sidebar_nav li {
+  color: var(--secondary);
+  list-style: none;
+  font-size: 30px;
+  transition: transform 0.1s;
+}
+
+.sidebar_nav li:hover {
+  transform: scale(1.2);
+}

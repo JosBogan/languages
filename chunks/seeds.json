@@ -1,0 +1,142 @@
+[
+{
+  "model": "chunks.chunk",
+  "pk": 1,
+  "fields": {
+    "name": "Declarations",
+    "data_name": "jp_1_1_1",
+    "external_link": "",
+    "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 2,
+  "fields": {
+    "name": "Questions",
+    "data_name": "jp_1_1_2",
+    "external_link": "",
+    "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 3,
+  "fields": {
+    "name": "Possession",
+    "data_name": "jp_1_1_3",
+    "external_link": "",
+    "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 4,
+  "fields": {
+    "name": "This, That and the Other Thing",
+    "data_name": "jp_1_2_1",
+    "external_link": "",
+    "chapter": 2
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 5,
+  "fields": {
+    "name": "Also/As Well",
+    "data_name": "jp_1_2_2",
+    "external_link": "",
+    "chapter": 2
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 6,
+  "fields": {
+    "name": "Not!",
+    "data_name": "jp_1_2_3",
+    "external_link": "",
+    "chapter": 2
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 7,
+  "fields": {
+    "name": "Sentence Enders",
+    "data_name": "jp_1_2_4",
+    "external_link": "",
+    "chapter": 2
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 8,
+  "fields": {
+    "name": "Verbs",
+    "data_name": "jp_1_3_1",
+    "external_link": "",
+    "chapter": 3
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 9,
+  "fields": {
+    "name": "Particles",
+    "data_name": "jp_1_3_2",
+    "external_link": "",
+    "chapter": 3
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 10,
+  "fields": {
+    "name": "Time",
+    "data_name": "jp_1_3_3",
+    "external_link": "",
+    "chapter": 3
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 11,
+  "fields": {
+    "name": "Propositions",
+    "data_name": "jp_1_3_4",
+    "external_link": "",
+    "chapter": 3
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 12,
+  "fields": {
+    "name": "Frequency",
+    "data_name": "jp_1_3_5",
+    "external_link": "",
+    "chapter": 3
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 13,
+  "fields": {
+    "name": "Sentence Structure",
+    "data_name": "jp_1_1_4",
+    "external_link": "",
+    "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 14,
+  "fields": {
+    "name": "Hiragana",
+    "data_name": "jp_1_alpha",
+    "external_link": "lang/jp/alpha/",
+    "chapter": 13
+  }
+}
+]

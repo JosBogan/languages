@@ -1,0 +1,100 @@
+.content_inner > div > table {
+  align-self: center;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.content_inner > div > table > thead {
+  background-color: var(--blue);
+  color: white;
+  /* border: 1px solid white;  */
+  overflow: hidden;
+}
+
+.content_inner th {
+  text-align: left;
+  padding: 20px 30px;
+  /* color: gray; */
+}
+
+.content_inner tr {
+  /* border-bottom: 1px solid var(--green); */
+}
+
+.content_inner tr:nth-child(even) {
+  background-color: rgb(223, 223, 223);
+}
+
+.content_inner td {
+  text-align: left;
+  padding: 20px 30px;
+}
+
+/* Comparison Table */
+
+.comparison_table {
+  width: 70%;
+}
+
+.comparison_table tr:nth-child(n+1) {
+  border-bottom: 1px solid gray;
+}
+
+.comparison_table tr:last-child {
+  border-bottom: 0px;
+}
+
+.comparison_table td:last-child {
+  /* background-color: rgb(223, 223, 223); */
+}
+
+.content_inner tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.comparison_table td:first-child {
+  /* background-color: rgb(223, 223, 223); */
+}
+
+.comparison_table td {
+  text-align: center;
+  width: 50%;
+}
+
+/*  */
+
+.text_alone {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  align-self: center;
+
+}
+
+.hover_text {
+  color: var(--blue);
+  font-weight: 800;
+  border: 1px solid var(--blue);
+  padding: 2px 5px;
+}
+
+.blue_text {
+  color: var(--blue);
+}
+
+.selelect_text_container {
+  align-self: center;
+}
+
+.select_text {
+  color: var(--blue);
+  font-weight: 800;
+  /* border-bottom: 2px solid var(--blue); */
+  padding: 2px 5px;
+}
+
+.select_text_selected {
+  border-bottom: 2px solid var(--blue);
+}

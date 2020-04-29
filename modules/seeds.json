@@ -1,0 +1,11 @@
+[
+{
+  "model": "modules.module",
+  "pk": 1,
+  "fields": {
+    "name": "Japanese 1",
+    "data_name": "jp_1",
+    "subject": 1
+  }
+}
+]

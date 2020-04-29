@@ -17,7 +17,6 @@ class SubjectListView(APIView):
     def get(self, _request):
         subjects = Subject.objects.all()
         serialized_subjects = SubjectSerializer(subjects, many=True)
-        print(serialized_subjects.data)
         return Response(serialized_subjects.data)
 
 class SubjectDetailView(APIView):
