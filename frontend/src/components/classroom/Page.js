@@ -7,6 +7,7 @@ import PageContent from './PageContent'
 import Alphabet from '../japanese/Alphabet'
 import TestContent from './TestContent'
 import VocabContent from './VocabContent'
+import VocabTest from './VocabTest'
 
 class Page extends React.Component {
 
@@ -66,6 +67,17 @@ class Page extends React.Component {
               />
             )}
           />
+            <Route 
+              path={`${this.props.match.url}/vocab/test`}
+              render={(props) => (
+                <VocabTest {...props} 
+                  vocab={this.state.chunk.vocab} 
+                  pathURL={`${this.props.match.url}/`} 
+                  collapsed={this.props.collapsed}
+                  totalPages={this.state.chunk.pages.length}
+                />
+              )}
+            />
           <Route 
             path={`${this.props.match.url}/vocab`}
             render={(props) => (

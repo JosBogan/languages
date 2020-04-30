@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Next from './common/Next'
+
 class VocabContent extends React.Component {
 
   state = {
@@ -23,38 +25,23 @@ class VocabContent extends React.Component {
     return (
       <div className="content_inner">
         <h1>Vocab</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Word</th>
-              <th>Translation</th>
-            </tr>
-          </thead>
-          <tbody>
+        <table className="vocab_table">
+          {/* <tbody> */}
         {Object.keys(this.state.vocab).map(vocabType => (
-          <>
-          <tr key={vocabType}><td>{vocabType}</td></tr>
+          <tbody　key={vocabType}>
+          <tr className="vocab_table_type_head">
+            <th colSpan="2">{vocabType}</th>
+          </tr>
           {this.state.vocab[vocabType].map(vocab => (
-            <tr>
+            <tr key={vocab.id}>
               <td>{vocab.native}</td>
               <td>{vocab.translation}</td>
             </tr>
           ))}
-          </>
-        ))}
           </tbody>
-        {/* {Object.keys(this.state.vocab).map(vocabType => (
-          <div className="question_type_container" key={vocabType}>
-          <h2>{vocabType}</h2>
-          {this.state.vocab[vocabType].map(question => (
-            <DirectQuestion 
-            key={question.id}
-            question={question}
-          />
-          ))}
-          </div>
-        ))} */}
+        ))}
         </table>
+        <Next path={`${this.props.pathURL}vocab/test`}/>
       </div>
     )
   }

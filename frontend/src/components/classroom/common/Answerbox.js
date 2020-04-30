@@ -9,7 +9,7 @@ function Answerbox(props) {
       <input 
         onChange={props.onChange}
         className={props.correct ? 'answerbox correct_answer': 'answerbox'}
-        // value={props.input}
+        value={props.input}
         disabled={props.disabled}
         autoFocus={!props.disabled}
         style={{

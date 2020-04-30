@@ -31,3 +31,30 @@
 .content_inner > div span {
   cursor: pointer;
 }
+
+.vocab_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vocab_table tr:nth-child(even) {
+  background-color: rgb(223, 223, 223);
+}
+
+.vocab_table tr td {
+  line-height: normal;
+  padding: 10px 30px;
+}
+
+.vocab_table_type_head {
+  background-color: var(--blue);
+  color: white;
+}
+
+.vocab_table .vocab_table_type_head th {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* .vocab_table th */

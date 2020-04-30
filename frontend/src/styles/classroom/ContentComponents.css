@@ -50,7 +50,7 @@
   /* background-color: rgb(223, 223, 223); */
 }
 
-.content_inner tr:nth-child(even) {
+.comparison_table tr:nth-child(even) {
   background-color: transparent;
 }
 
