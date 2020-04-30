@@ -9,6 +9,7 @@ import SubjectIndex from './subjects/SubjectsIndex'
 import Navbar from './Navbar'
 import Login from '../auth/Login'
 import Register from '../auth/Register'
+import UserPage from './UserPage'
 
 function HubContainer() {
   return (
@@ -16,6 +17,7 @@ function HubContainer() {
       <Navbar />
       <div className="main_offset">
       <Switch>
+          <Route path="/dashboard" component={UserPage}/>
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/> 
           <Route path="/subjects" component={SubjectIndex}/>

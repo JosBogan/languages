@@ -1,6 +1,7 @@
 import React from 'react'
 // import { Switch } from 'react-router-dom'
 import { Switch, Route } from 'react-router-dom'
+import axios from 'axios'
 
 import Page from './Page'
 
@@ -11,7 +12,13 @@ class ClassroomContent extends React.Component {
 
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    // try {
+    //   const res = await axios.get('/api/chapters/jp_1_1')
+    //   console.log(res.data)
+    // } catch (err) {
+    //   console.log(err)
+    // }
     this.setState({ module: this.props.module })
   }
 

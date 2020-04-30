@@ -5,6 +5,8 @@ import { Switch, Route } from 'react-router-dom'
 
 import PageContent from './PageContent'
 import Alphabet from '../japanese/Alphabet'
+import TestContent from './TestContent'
+import VocabContent from './VocabContent'
 
 class Page extends React.Component {
 
@@ -38,7 +40,7 @@ class Page extends React.Component {
     return (
       <div>
         <Switch>
-          {this.state.chunk.pages.length ? this.state.chunk.pages.map(page => (
+          {this.state.chunk.pages.map(page => (
             <Route 
               key={page.data_name}
               path={`${this.props.match.url}/${page.page_no}`} 
@@ -51,12 +53,30 @@ class Page extends React.Component {
                 />
               )}
             />
-            )) : 
-            <Route 
-              path={`${this.props.match.url}`}
-              component={Alphabet} 
-            />
+            ))
           }
+          <Route 
+            path={`${this.props.match.url}/test`}
+            render={(props) => (
+              <TestContent {...props} 
+                questions={this.state.chunk.questions} 
+                pathURL={`${this.props.match.url}/`} 
+                collapsed={this.props.collapsed}
+                totalPages={this.state.chunk.pages.length}
+              />
+            )}
+          />
+          <Route 
+            path={`${this.props.match.url}/vocab`}
+            render={(props) => (
+              <VocabContent {...props} 
+                vocab={this.state.chunk.vocab} 
+                pathURL={`${this.props.match.url}/`} 
+                collapsed={this.props.collapsed}
+                totalPages={this.state.chunk.pages.length}
+              />
+            )}
+          />
         </Switch>
       </div>
     )

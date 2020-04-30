@@ -220,28 +220,6 @@ a {
   color: rgb(167, 167, 167);
 } */
 
-/* Answerbox */
-
-.answerbox {
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  font-size: 25px;
-  padding: 5px 10px;
-  border: 2px solid rgb(216, 216, 216);
-  /* height: 30px */
-}
-
-.answerbox:focus {
-  outline: none;
-  border-bottom: 2px solid var(--blue);
-}
-
-/* Correct　Answer */
-
-.correct_answer {
-  background-color: var(--green);
-  color: white;
-}
 
 /* Score */
 

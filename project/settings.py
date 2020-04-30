@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'chapters',
     'chunks',
     'pages',
+    'vocab',
+    'questions',
 ]
 
 MIDDLEWARE = [

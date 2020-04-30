@@ -12,6 +12,7 @@ import './styles/hub/Main.css'
 import './styles/hub/subjects/Index.css'
 import './styles/hub/Navbar.css'
 import './styles/hub/Auth.css'
+import './styles/hub/subjects/Show.css'
 
 import Classroom from './components/classroom/Classroom'
 import HubContainer from './components/hub/HubContainer';

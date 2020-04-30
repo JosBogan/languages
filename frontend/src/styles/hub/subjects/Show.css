@@ -1,0 +1,61 @@
+.subject_page_container {
+  padding-top: 75px;
+}
+
+.subject_header_container {
+
+}
+
+.subject_header {
+  width: 66%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  color: white;
+  background: var(--secondary);
+  border-radius: 0 20px 20px 0;
+}
+
+.subject_page_content_container {
+  margin-top: 100px;
+  display: flex;
+  width: 100%;
+}
+
+.subject_page_modules_contatiner {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  /* background: yellow; */
+}
+
+.subject_page_paths_container {
+  flex: 1
+}
+
+/* Module Card */
+
+.module_card_container {
+  width: 340px;
+  height: 200px;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.05) 0 10px 10px -5px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.module_card_details {
+  flex: 1;
+}
+
+.module_card_progress_containter {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}

@@ -26,7 +26,7 @@ class Landing extends React.Component {
           <nav></nav>
         </header>
         <section className="main_hero">
-          <h1>This is the title</h1>
+          <h1>Languages Galore</h1>
           <div>
             <Link className="landing_view_courses" to="/subjects" >View our Subjects</Link>
           </div>

@@ -77,8 +77,10 @@ class PageContent extends React.Component {
             {this.textConversion(this.state.text)}
             </Markdown>
         </div>
-        {page.page_no !== this.props.totalPages &&
-          <Next path={`${this.props.pathURL}${page.page_no + 1}`}/>}
+        {page.page_no !== this.props.totalPages ?
+          <Next path={`${this.props.pathURL}${page.page_no + 1}`}/> :
+          <Next path={`${this.props.pathURL}test`}/>
+        }
       </div>
     )
   }

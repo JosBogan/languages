@@ -40,7 +40,7 @@ class Sidebar extends React.Component {
           <div className="sidebar_nav_wrapper">
             <ul className="sidebar_nav">
               <Link to="/"><li><FontAwesomeIcon icon={faHome}/></li></Link>
-              <Link to="/"><li><FontAwesomeIcon icon={faUser}/></li></Link>
+              <Link to="/dashboard"><li><FontAwesomeIcon icon={faUser}/></li></Link>
               <Link to="/"><li><FontAwesomeIcon icon={faCog}/></li></Link>
             </ul>
           </div>

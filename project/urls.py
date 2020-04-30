@@ -20,7 +20,8 @@ urlpatterns = [
     path('api/admin/', admin.site.urls),
     path('api/lang/jp/alpha/', include('jp_alphabet.urls')),
     path('api/subjects/', include('subjects.urls')),
+    path('api/chapters/', include('chapters.urls')),
     path('api/modules/', include('modules.urls')),
     path('api/chunks/', include('chunks.urls')),
-    path('api/auth/', include('jwt_auth.urls'))
+    path('api/auth/', include('jwt_auth.urls')),
 ]

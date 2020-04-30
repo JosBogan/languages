@@ -24,7 +24,8 @@ function Module(props) {
           className="module_dropdown_line"
         ></div>
         {props.data.chunks.map(chunk => {
-          return (
+          if (chunk.data_type === 'lesson') {
+            return (
             <Link key={chunk.data_name} to={`${props.params}/${chunk.data_name}/1`}>
               <ModuleInner 
               onModuleClick={props.onModuleClick}
@@ -35,6 +36,31 @@ function Module(props) {
               />
             </Link>
           )
+            } else if (chunk.data_type === 'test') {
+              return (
+                <Link key={chunk.data_name} to={`${props.params}/${chunk.data_name}/test`}>
+                <ModuleInner 
+                onModuleClick={props.onModuleClick}
+                title={false}
+                text={chunk.name}
+                data_name={chunk.data_name}
+                open={props.openChunk === chunk.data_name}
+                />
+              </Link>
+              )
+            } else if (chunk.data_type === 'vocab') {
+              return (
+                <Link key={chunk.data_name} to={`${props.params}/${chunk.data_name}/vocab`}>
+                <ModuleInner 
+                  onModuleClick={props.onModuleClick}
+                  title={false}
+                  text={chunk.name}
+                  data_name={chunk.data_name}
+                  open={props.openChunk === chunk.data_name}
+                />
+              </Link>
+              )
+            }
         })}
       </div>
     </div>

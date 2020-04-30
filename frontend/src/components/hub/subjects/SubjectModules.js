@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 // import Module from '../classroom/sidebar/Module'
 
+import ModuleCard from './ModuleCard'
+
 class SubjectModules extends React.Component {
   
   state = {
     subject: '',
-    modules: []
+    modules: null
   }
 
   async componentDidMount() {
@@ -22,11 +24,25 @@ class SubjectModules extends React.Component {
   }
 
   render() {
+    if (!this.state.modules) return null
     return (
-      <div>
-        {this.state.modules.map(module => (
-          <Link key={module.data_name} to={`/${this.state.subject}/${module.data_name}`}>{module.name}</Link>
-        ))}
+      <div className="subject_page_container">
+        <div className="subject_header_container">
+          <h1 className="subject_header">
+            {this.state.subject[0].toUpperCase() + this.state.subject.slice(1)}
+          </h1>
+        </div>
+        <section className="subject_page_content_container">
+          <div className="subject_page_modules_contatiner">
+            {this.state.modules.map(module => (
+              <ModuleCard key={module.data_name} urlcomp={`/${this.state.subject}/${module.data_name}`} module={module}/>
+              // <Link key={module.data_name} to={`/${this.state.subject}/${module.data_name}`}>{module.name}</Link>
+            ))}
+          </div>
+          <div className="subject_page_paths_container">
+
+          </div>
+        </section>
       </div>
     )
   }

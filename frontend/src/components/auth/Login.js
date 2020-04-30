@@ -22,6 +22,7 @@ class Login extends React.Component {
     try {
       const res = await axios.post('/api/auth/login/', this.state.data, { headers })
       Auth.setToken(res.data.token)
+      this.props.history.push('/')
     } catch (err) {
       console.log(err)
     }
