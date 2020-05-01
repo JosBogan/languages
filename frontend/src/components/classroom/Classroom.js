@@ -59,8 +59,9 @@ class Classroom extends React.Component {
             marginLeft: this.state.collapsed ? '-300px' : '0'
           }}
         >
+          {/* {console.log(this.state.module)} */}
           <ClassroomContent 
-            // module={this.state.module} 
+            module={this.state.module} 
             collapsed={this.state.collapsed}
           />
         </section>

@@ -252,15 +252,16 @@ a {
 
 /* Alphabet */
 
-.alphabet_container_outer {
+.content_inner > .alphabet_container_outer {
+  margin-top: -40px;
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 .alphabet_container_inner {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
   width: 470px;
   justify-content: space-between;
   height: 700px;

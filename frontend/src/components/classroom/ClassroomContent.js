@@ -5,6 +5,7 @@ import axios from 'axios'
 
 import Page from './Page'
 import SoloChapter  from './SoloChapter'
+import ModuleInfo from './ModuleInfo'
 
 class ClassroomContent extends React.Component {
 
@@ -37,7 +38,9 @@ class ClassroomContent extends React.Component {
           // path="/cr/:chunk_name"
           render={(props) => <Page {...props} collapsed={this.props.collapsed}/>}/>
           <Route path="/cr/:subject_name/:module_name/:chapter_name" component={SoloChapter}/>
-        {/* <Route path="/:data_name/:module_name/:chunk_name" component={Page}/> */}
+          <Route 
+            path="/cr/:subject_name/:module_name" 
+            render={(props) => <ModuleInfo {...props} module={this.props.module}/>}/>
       </Switch>
     )
   }

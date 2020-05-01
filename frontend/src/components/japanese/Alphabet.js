@@ -19,19 +19,14 @@ class Alphabet extends React.Component {
     }
   }
 
-  async componentDidMount() {
-    try {
-      const res = await axios.get('/api/lang/jp/alpha/')
-      console.log(res.data)
-      const rows = res.data.reduce((acc, char)=> {
-        let newAcc = JSON.parse(JSON.stringify(acc))
-        acc.length < char.row ? newAcc.push([char]) : newAcc[char.row - 1].push(char)
-        return newAcc
-      }, [])
-      this.setState({ alphabet: rows })
-    } catch(err) {
-      // console.log(err)
-    }
+  componentDidMount() {
+    // this.props.alphabet
+    const rows = this.props.alphabet.reduce((acc, char)=> {
+      let newAcc = JSON.parse(JSON.stringify(acc))
+      acc.length < char.row ? newAcc.push([char]) : newAcc[char.row - 1].push(char)
+      return newAcc
+    }, [])
+    this.setState({ alphabet: rows })
   }
 
   handleRowSelect = (event) => {

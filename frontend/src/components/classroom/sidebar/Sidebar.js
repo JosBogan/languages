@@ -25,7 +25,9 @@ class Sidebar extends React.Component {
 
   onModuleClick = (event, data_name, title, single) => {
     title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
-    if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
+    console.log(single)
+    if (single) this.setState({ openChunk: null })
+    // if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
   }
 
   render() {
@@ -42,7 +44,7 @@ class Sidebar extends React.Component {
             <ul className="sidebar_nav">
               <Link to="/"><li><FontAwesomeIcon icon={faHome}/></li></Link>
               <Link to="/dashboard"><li><FontAwesomeIcon icon={faUser}/></li></Link>
-              <Link to="/"><li><FontAwesomeIcon icon={faCog}/></li></Link>
+              <Link to={`/cr/${this.props.match.params.subject_name}/${this.props.match.params.module_name}`}><li><FontAwesomeIcon icon={faCog}/></li></Link>
             </ul>
           </div>
           <div className="all_module_container">

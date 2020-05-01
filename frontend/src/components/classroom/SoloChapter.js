@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 
+import Alphabet from '../japanese/Alphabet'
+
 class SoloChapter extends React.Component {
 
   state = {
@@ -28,8 +30,11 @@ class SoloChapter extends React.Component {
   }
 
   render() {
+    if (!this.state.data) return null
     return (
-      <div>fdsa</div>
+      <div className="content_inner">
+        <Alphabet alphabet={this.state.data}/>
+      </div>
     )
   }
 }

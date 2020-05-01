@@ -20,6 +20,7 @@ function Module(props) {
         onModuleClick={props.onModuleClick}
         open={props.open}
         title={true}
+        single={props.single}
         text={props.data.name}
         data_name={props.data.data_name}
       />

@@ -48,14 +48,42 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0 10px 10px -5px;
   border-radius: 20px;
   overflow: hidden;
+  padding: 20px 20px;
+  transition: box-shadow 0.2s;
+}
+
+.module_card_container:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 15px 15px -5px;
 }
 
 .module_card_details {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.module_card_subject {
+  color: rgb(109, 109, 109);
 }
 
 .module_card_progress_containter {
   display: flex;
   height: 50px;
   align-items: center;
+}
+
+.progress_bar_container {
+  height: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.progress_bar {
+  height: 100%;
+  width: 50%;
+  background-color: var(--green);
 }

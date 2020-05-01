@@ -8,9 +8,13 @@ function ModuleCard(props) {
     <Link to={`${props.urlcomp}`}>
       <div className="module_card_container">
         <div className="module_card_details">
-          <h3>{props.module.name}</h3>
+          <h2>{props.module.name}</h2>
+          <h5 className="module_card_subject">{props.subject}</h5>
         </div>
         <div className="module_card_progress_containter">
+          <div className="progress_bar_container">
+            <div className="progress_bar"></div>
+          </div>
         </div>
       </div>
     </Link>
