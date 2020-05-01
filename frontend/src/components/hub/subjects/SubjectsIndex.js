@@ -23,7 +23,7 @@ class SubjectIndex extends React.Component {
     if (!this.state.subjects) return null
     return (
       <section>
-        <h1>Subjects</h1>
+        <h1 className="subjects_index_title">Subjects</h1>
         <div className="subject_container">
           {this.state.subjects.map(subject => (
             <SubjectCard 

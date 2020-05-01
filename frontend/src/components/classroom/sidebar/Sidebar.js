@@ -23,8 +23,9 @@ class Sidebar extends React.Component {
     }
   }
 
-  onModuleClick = (event, data_name, title) => {
+  onModuleClick = (event, data_name, title, single) => {
     title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
+    if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
   }
 
   render() {
@@ -47,12 +48,14 @@ class Sidebar extends React.Component {
           <div className="all_module_container">
             {this.state.module.chapters.map(chapter => (
               <Module 
-              key={chapter.data_name}
-              onModuleClick={this.onModuleClick}
-              open={this.state.open === chapter.data_name}
-              openChunk={this.state.openChunk}
-              data={chapter}
-              params={`/${this.props.match.params.data_name}/${this.props.match.params.module_name}`}
+                key={chapter.data_name}
+                onModuleClick={this.onModuleClick}
+                open={this.state.open === chapter.data_name}
+                openChunk={this.state.openChunk}
+                data={chapter}
+                module={this.state.module.data_name}
+                single={chapter.single}
+                subject={this.props.match.params.subject_name}
               />
             ))}
           </div>

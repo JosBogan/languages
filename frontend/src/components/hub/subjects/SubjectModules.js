@@ -35,7 +35,7 @@ class SubjectModules extends React.Component {
         <section className="subject_page_content_container">
           <div className="subject_page_modules_contatiner">
             {this.state.modules.map(module => (
-              <ModuleCard key={module.data_name} urlcomp={`/${this.state.subject}/${module.data_name}`} module={module}/>
+              <ModuleCard key={module.data_name} urlcomp={`/cr/${this.state.subject}/${module.data_name}`} module={module}/>
               // <Link key={module.data_name} to={`/${this.state.subject}/${module.data_name}`}>{module.name}</Link>
             ))}
           </div>

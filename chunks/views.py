@@ -19,3 +19,13 @@ class ChunkDetailView(APIView):
             return Response(serialized_chunk.data)
         except Chunk.DoesNotExist:
             return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)
+
+class ChunkPkDetailView(APIView):
+
+    def get(self, _request, pk):
+        try:
+            chunk = Chunk.objects.get(pk=pk)
+            serialized_chunk = ChunkSerializer(chunk)
+            return Response(serialized_chunk.data)
+        except Chunk.DoesNotExist:
+            return Response({'message': 'Not Found'}, status=HTTP_404_NOT_FOUND)

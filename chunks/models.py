@@ -10,6 +10,7 @@ class Chunk(models.Model):
     ]
     name = models.CharField(max_length=50)
     data_name = models.CharField(max_length=50)
+    order = models.IntegerField()
     data_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
     external_link = models.CharField(max_length=100, blank=True)
     chapter = models.ForeignKey('chapters.Chapter', on_delete=models.CASCADE, related_name='chunks')

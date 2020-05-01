@@ -23,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/:data_name/:module_name/" component={Classroom}/>
+        <Route path="/cr/:subject_name/:module_name/" component={Classroom}/>
         <Route path="/" component={HubContainer}/>
       </Switch>
     </BrowserRouter>

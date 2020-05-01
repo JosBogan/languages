@@ -6,6 +6,8 @@ import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 import Sidebar from './sidebar/Sidebar'
 import ClassroomContent from './ClassroomContent'
 // import Chunk from '../Chunk'
+import Page from './Page'
+
 
 class Classroom extends React.Component {
 
@@ -58,7 +60,7 @@ class Classroom extends React.Component {
           }}
         >
           <ClassroomContent 
-            module={this.state.module} 
+            // module={this.state.module} 
             collapsed={this.state.collapsed}
           />
         </section>

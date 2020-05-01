@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 
 import Page from './Page'
+import SoloChapter  from './SoloChapter'
 
 class ClassroomContent extends React.Component {
 
@@ -19,21 +20,23 @@ class ClassroomContent extends React.Component {
     // } catch (err) {
     //   console.log(err)
     // }
-    this.setState({ module: this.props.module })
+    // this.setState({ module: this.props.module })
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps !== this.props) {
-      this.setState({ module: this.props.module })
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps !== this.props) {
+  //     this.setState({ module: this.props.module })
+  //   }
+  // }
 
   render() {
     return (
       <Switch>
         <Route 
-          path="/:data_name/:module_name/:chunk_name"
+          path="/cr/:subject_name/:module_name/:chapter_name/:chunk_name"
+          // path="/cr/:chunk_name"
           render={(props) => <Page {...props} collapsed={this.props.collapsed}/>}/>
+          <Route path="/cr/:subject_name/:module_name/:chapter_name" component={SoloChapter}/>
         {/* <Route path="/:data_name/:module_name/:chunk_name" component={Page}/> */}
       </Switch>
     )
