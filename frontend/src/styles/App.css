@@ -168,8 +168,9 @@ a {
 
 .modal_background {
   position: fixed;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   top: 0px;
   left: 0px;
   height: 100%;

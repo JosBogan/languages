@@ -10,7 +10,6 @@ class ModuleInfo extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.module)
   }
 
   textConversion = (input) => {
@@ -20,7 +19,6 @@ class ModuleInfo extends React.Component {
 
   render() {
     if (!this.props.module.getting_started) return null
-    console.log(this.props.module)
     return (
       <div className="content_inner">
         <h1>Getting Started</h1>

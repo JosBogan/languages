@@ -14,21 +14,19 @@ class Navbar extends React.Component {
 
   setScrollTrue = () => {
     if (window.scrollY > 10) {
-      console.log('above 10')
       this.setState({ scrolled: true })
     }
   }
 
   setScrollFalse = () => {
     if (window.scrollY < 10) {
-      console.log('below 10')
+
       this.setState({ scrolled: false })
     }
   }
 
   componentDidMount() {
     document.addEventListener('scroll', () => this.state.scrolled ? this.setScrollFalse() : this.setScrollTrue())
-    console.log(Auth.isAuthenticated())
   }
 
   handleLogout = () => {

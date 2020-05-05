@@ -12,7 +12,6 @@ class Landing extends React.Component {
   async componentDidMount() {
     try {
       const res = await axios.get('/api/subjects/')
-      console.log(res.data)
       this.setState({ subjects: res.data })
     } catch(err) {
       console.log(err)

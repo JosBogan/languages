@@ -1,16 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import axios from 'axios'
 // import Module from '../classroom/sidebar/Module'
 
+import Auth from '../../../lib/auth'
+
 import ModuleCard from './ModuleCard'
+import Modal from '../../common/Modal'
+import ModuleInfoInner from './ModuleInfoInner'
 
 class SubjectModules extends React.Component {
   
   state = {
     subject: '',
-    modules: null
+    modules: null,
+    modal: false,
+    modalModule: null
   }
 
   async componentDidMount() {
@@ -18,6 +24,28 @@ class SubjectModules extends React.Component {
     try {
       const res = await axios.get(`/api/subjects/${data_name}/`)
       this.setState({ modules: res.data.modules, subject: res.data.data_name })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  toggleModal = (event) => {
+    this.setState({modal: !this.state.modal})
+  }
+
+  setModal = (event, module) => {
+    this.setState({ modalModule: module})
+  }
+
+  addModuleUser = async () => {
+    try {
+      const res = await axios.put('/api/auth/user/module/', 
+      { module: this.state.modalModule.id }, 
+      {
+        headers: {
+          Authorization: `Bearer ${Auth.getToken()}`
+        }
+      })
     } catch (err) {
       console.log(err)
     }
@@ -37,9 +65,11 @@ class SubjectModules extends React.Component {
             {this.state.modules.map(module => (
               <ModuleCard 
                 key={module.data_name} 
-                urlcomp={`/cr/${this.state.subject}/${module.data_name}`} 
+                // urlcomp={`/cr/${this.state.subject}/${module.data_name}`} 
                 module={module}
                 subject={this.state.subject}
+                toggleModal={this.toggleModal}
+                setModal={this.setModal}
               />
               // <Link key={module.data_name} to={`/${this.state.subject}/${module.data_name}`}>{module.name}</Link>
             ))}
@@ -48,6 +78,19 @@ class SubjectModules extends React.Component {
 
           </div>
         </section>
+        {this.state.modal && 
+          <Modal 
+            toggleModal={this.toggleModal}
+            component={
+              <ModuleInfoInner 
+                module={this.state.modalModule}
+                urlcomp={`/cr/${this.state.subject}/${this.state.modalModule.data_name}`}
+                toggleModal={this.toggleModal}
+                addModuleUser={this.addModuleUser}
+              />
+            }
+          />
+        }
       </div>
     )
   }

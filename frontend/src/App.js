@@ -15,7 +15,8 @@ import './styles/hub/Auth.css'
 import './styles/hub/subjects/Show.css'
 
 import Classroom from './components/classroom/Classroom'
-import HubContainer from './components/hub/HubContainer';
+import HubContainer from './components/hub/HubContainer'
+import SecureRoute from './components/auth/SecureRoute'
 
 
 
@@ -23,7 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/cr/:subject_name/:module_name/" component={Classroom}/>
+        <SecureRoute path="/cr/:subject_name/:module_name/" component={Classroom}/>
         <Route path="/" component={HubContainer}/>
       </Switch>
     </BrowserRouter>

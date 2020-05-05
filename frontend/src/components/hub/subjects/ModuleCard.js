@@ -1,12 +1,18 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 function ModuleCard(props) {
 
   return (
-    <Link to={`${props.urlcomp}`}>
-      <div className="module_card_container">
+    // <Link to={`${props.urlcomp}`}>
+      <div 
+        className="module_card_container"
+        onClick={(event) => {
+          props.toggleModal(event)
+          props.setModal(event, props.module)}
+        }
+      >
         <div className="module_card_details">
           <h2>{props.module.name}</h2>
           <h5 className="module_card_subject">{props.subject}</h5>
@@ -17,7 +23,7 @@ function ModuleCard(props) {
           </div>
         </div>
       </div>
-    </Link>
+    // </Link>
   )
 }
 

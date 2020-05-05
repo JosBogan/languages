@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Switch } from 'react-router-dom'
 import { Switch, Route } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
 import Page from './Page'
 import SoloChapter  from './SoloChapter'

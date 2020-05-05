@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Switch, Route } from 'react-router-dom'
 
 import PageContent from './PageContent'
-import Alphabet from '../japanese/Alphabet'
+// import Alphabet from '../japanese/Alphabet'
 import TestContent from './TestContent'
 import VocabContent from './VocabContent'
 import VocabTest from './VocabTest'

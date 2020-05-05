@@ -2,16 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
+import { Redirect } from 'react-router-dom'
 
 import Sidebar from './sidebar/Sidebar'
 import ClassroomContent from './ClassroomContent'
 // import Chunk from '../Chunk'
-import Page from './Page'
+// import Page from './Page'
 
+import Auth from '../../lib/auth'
 
 class Classroom extends React.Component {
 
   state = {
+    user: null,
     module: {},
     chunk: {},
     collapsed: false
@@ -29,6 +32,21 @@ class Classroom extends React.Component {
     } catch (err) {
       console.log(err)
     }
+    this.getUser()
+  }
+
+  getUser = async () => {
+    try {
+      const res = await axios.get(`/api/auth/user/`, {
+        headers: {
+          Authorization: `Bearer ${Auth.getToken()}`
+        }
+      })
+      console.log(res.data)
+      this.setState({ user: res.data })
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   collapseSideBar = () => {
@@ -36,6 +54,13 @@ class Classroom extends React.Component {
   }
 
   render() {
+    // if (!this.state.user) return null
+    // if (
+    //   !this.props.location.fromProps && 
+    //   (
+    //   !this.state.user.completed_modules.includes(this.state.module.id) ||
+    //   !this.state.user.current_modules.includes(this.state.module.id))
+    //   ) return <Redirect to="/"/>
     return (
       <main className="page_container">
         <div 

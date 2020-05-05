@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Landing from './Landing'
 import SubjectModules from './subjects/SubjectModules'
@@ -10,6 +10,8 @@ import Navbar from './Navbar'
 import Login from '../auth/Login'
 import Register from '../auth/Register'
 import UserPage from './UserPage'
+import SecureRoute from '../auth/SecureRoute'
+import UnSecureRoute from '../auth/UnSecureRoute'
 
 function HubContainer() {
   return (
@@ -17,9 +19,9 @@ function HubContainer() {
       <Navbar />
       <div className="main_offset">
       <Switch>
-          <Route path="/dashboard" component={UserPage}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/register" component={Register}/> 
+          <SecureRoute path="/dashboard" component={UserPage}/>
+          <UnSecureRoute path="/login" component={Login}/>
+          <UnSecureRoute path="/register" component={Register}/> 
           <Route path="/subjects" component={SubjectIndex}/>
           <Route path="/:data_name/" component={SubjectModules}/>
           <Route path="/" component={Landing}/>
