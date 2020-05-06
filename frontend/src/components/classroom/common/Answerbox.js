@@ -5,7 +5,6 @@ function Answerbox(props) {
 
   return (
     <div className="answerbox_container">
-      {console.log(!props.disabled)}
       <input 
         onChange={props.onChange}
         className={props.correct ? 'answerbox correct_answer': 'answerbox'}

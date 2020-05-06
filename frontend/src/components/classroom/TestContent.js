@@ -7,7 +7,8 @@ import DirectQuestion from './DirectQuestion'
 class TestContent extends React.Component {
 
   state = {
-    questions: null
+    questions: null,
+    correct: 0
   }
 
   componentDidMount() {
@@ -22,6 +23,12 @@ class TestContent extends React.Component {
     this.setState({ questions })
   }
 
+  updateCorrect = () => {
+    const score = this.state.correct + 1
+    if (score >= this.state.questions.translate.length) this.props.updateUser(this.props.chunkId)
+    this.setState({ correct: score })
+  }
+
   render() {
     if (!this.state.questions) return null
     return (
@@ -31,11 +38,12 @@ class TestContent extends React.Component {
         <h1>Test</h1>
         {Object.keys(this.state.questions).map(questionType => (
           <div className="question_type_container" key={questionType}>
-          <h2>{questionType}</h2>
+          <h2 className="question_type_header">{questionType[0].toUpperCase() + questionType.slice(1)}</h2>
           {this.state.questions[questionType].map(question => (
             <DirectQuestion 
             key={question.id}
             question={question}
+            updateCorrect={this.updateCorrect}
           />
           ))}
           </div>

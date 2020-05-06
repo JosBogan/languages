@@ -13,7 +13,7 @@ class PageContent extends React.Component {
     page: null,
     text: '',
     textTest: 'The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following structure:↵↵<p class="text_alone blue_text">\\_\\_\\_\\_\\_\\_は \\_\\_\\_\\_\\_\\_です</p><TextComparison text={[["I am a teacher", "わたしはせんせいです"], ["Takeshi is a student", "たけしはがくせいです"], ["The teacher is english", "せんせはイギリスじんです"]]}/>**は** is the <span class="blue_text">**topic particle**</span> and indicates the topic of the sentence that comes just before. **です** is a copula verb that means **"to be"** or **"is"**.↵↵<sup>Note: whilst **は** is ordinarily pronounced **ha**, when used as a particle it is pronounced **wa**</sup>',
-    textTest2: 'The particle <span class="blue_text">の</span> is extreemly versitile and can used to pair two nouns together to give second noun the property of, or further description expressed in the first noun. <span class="blue_text">の</span> can also describe the origin of something.↵↵<TextComparison highlighted={の}　text={[["Japanese friend", "にほんのともだち"]]}/>',
+    textTest2: 'As you have have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**↵↵<p class="text_alone">I am a student</p>↵↵Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.↵↵<p class="text_alone">わたしは　がくせい　です</p>↵↵Whilst this will take some time to get used to so don\'t worry if it inially takes you some time to figure out what each sentence is saying!',
     selectText: null
   }
 

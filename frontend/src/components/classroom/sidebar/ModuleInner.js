@@ -6,7 +6,7 @@ function ModuleInner(props) {
     <div>
       <div 
         className={`module_container ${props.open && 'module_container_open'}`}
-        onClick={(event) => props.onModuleClick(event, props.data_name, props.title, props.single)}
+        onClick={(event) => props.onSelectionClick(event, props.data_name, props.title, props.single)}
         style={{
           fontSize: props.title ? '17px' : '15px',
           margin: props.title ? '30px 0 0 0' : '20px 0 0 0',

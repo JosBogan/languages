@@ -15,7 +15,7 @@ class Sidebar extends React.Component {
     module: null
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState, snapshop) {
     const module = JSON.parse(JSON.stringify(this.props.module))
     module.chapters.sort((a, b) => a.order - b.order)
     if (prevProps !== this.props) {
@@ -23,12 +23,10 @@ class Sidebar extends React.Component {
     }
   }
 
-  onModuleClick = (event, data_name, title, single) => {
-    title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
-    console.log(single)
-    if (single) this.setState({ openChunk: null })
-    // if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
-  }
+  // onModuleClick = (event, data_name, title, single) => {
+  //   title ? this.setState({ open: data_name }) : this.setState({ openChunk: data_name })
+  //   if (single) this.setState({ openChunk: null })
+  // }
 
   render() {
     if (!this.state.module) return null
@@ -51,9 +49,12 @@ class Sidebar extends React.Component {
             {this.state.module.chapters.map(chapter => (
               <Module 
                 key={chapter.data_name}
-                onModuleClick={this.onModuleClick}
-                open={this.state.open === chapter.data_name}
-                openChunk={this.state.openChunk}
+                // onModuleClick={this.onModuleClick}
+                onSelectionClick={this.props.onSelectionClick}
+                // open={this.state.open === chapter.data_name}
+                // openChunk={this.state.openChunk}
+                openChapter={this.props.openChapter}
+                openChunk={this.props.openChunk}
                 data={chapter}
                 module={this.state.module.data_name}
                 single={chapter.single}

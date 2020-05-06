@@ -26,8 +26,13 @@ class Page extends React.Component {
   }
 
   async componentDidMount() {
+    this.props.setSidebarOpen(this.props.match.params.chapter_name, this.props.match.params.chunk_name)
     this.getChunk()
   }
+  
+  // componentDidMount() {
+    // this.props.setSidebarOpen(this.props.match.params.chapter_name, this.props.match.params.chunk_name)
+  // }
 
   componentDidUpdate(prevProps) {
     if (this.props.match.params.chunk_name !== prevProps.match.params.chunk_name) {
@@ -64,6 +69,8 @@ class Page extends React.Component {
                 pathURL={`${this.props.match.url}/`} 
                 collapsed={this.props.collapsed}
                 totalPages={this.state.chunk.pages.length}
+                updateUser={this.props.updateUser}
+                chunkId={this.state.chunk.id}
               />
             )}
           />

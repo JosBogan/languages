@@ -1,3 +1,5 @@
+# pylint: disable=no-member
+
 from datetime import timedelta, datetime
 
 from django.shortcuts import render
@@ -13,7 +15,10 @@ from rest_framework.permissions import IsAuthenticated
 
 import jwt
 
-from .serializers import UserSerializer
+from .serializers import UserSerializer, ChapterSerializer
+
+from chunks.models import Chunk
+from chapters.models import Chapter
 
 User = get_user_model()
 
@@ -78,5 +83,22 @@ class UserAddModuleView(APIView):
             #     serialized_user.save()
             return Response(status=HTTP_202_ACCEPTED)
             # return Response(serialized_user.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+        except User.DoesNotExist:
+            raise PermissionDenied({'message': 'Invalid Credentials'})
+
+class UserAddCompletedChunk(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def put(self, request):
+        try:
+            user = User.objects.get(pk=request.user.id)
+            user.completed_chunks.add(request.data['chunk'])
+            chunk = Chunk.objects.get(pk=request.data['chunk'])
+            chapter = Chapter.objects.get(pk=chunk.chapter.id)
+            serialized_chapter = ChapterSerializer(chapter)
+            user.save()
+            serialized_user = UserSerializer(user)
+            return Response(serialized_user.data)
         except User.DoesNotExist:
             raise PermissionDenied({'message': 'Invalid Credentials'})

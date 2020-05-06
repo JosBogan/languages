@@ -10,9 +10,9 @@ class DirectQuestion extends React.Component {
 
   onChange = (event) => {
     const val = event.target.value
-    console.log(val, this.props.question)
     if (val === this.props.question.answer) {
       // const score = this.state.score + 1
+      this.props.updateCorrect()
       this.setState({ correct: true, disabled: true })
     } else {
       this.setState({ correct: false })
@@ -23,7 +23,7 @@ class DirectQuestion extends React.Component {
   render() {
     return (
     <div className="question_container"> 
-      <div>{this.props.question.question}</div>
+      <p className="question_text">{this.props.question.question}</p>
       <AnswerBox
         onChange={this.onChange}
         correct={this.state.correct}

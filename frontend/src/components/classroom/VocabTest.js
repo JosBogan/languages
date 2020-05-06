@@ -51,13 +51,15 @@ class VocabTest extends React.Component {
     return (
       <div className="content_inner">
         <h1>Test</h1>
-        <h3>{this.state.transDirection ? this.state.currentVocab.native : this.state.currentVocab.translation}</h3>
+        {/* <div className="vocab_wrapper"> */}
+        <p className="question_text vocab_question">{this.state.transDirection ? this.state.currentVocab.native : this.state.currentVocab.translation}</p>
         <AnswerBox 
           onChange={this.onChange}
           correct={this.state.correct}
           disabled={this.state.disabled}
           input={this.state.input}
         />
+        {/* </div> */}
         <Back collapsed={this.props.collapsed} path={`${this.props.pathURL}vocab`}/>
       </div>
     )

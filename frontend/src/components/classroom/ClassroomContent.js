@@ -36,7 +36,13 @@ class ClassroomContent extends React.Component {
         <Route 
           path="/cr/:subject_name/:module_name/:chapter_name/:chunk_name"
           // path="/cr/:chunk_name"
-          render={(props) => <Page {...props} collapsed={this.props.collapsed}/>}/>
+          render={(props) => (
+            <Page {...props} 
+              collapsed={this.props.collapsed} 
+              updateUser={this.props.updateUser}
+              setSidebarOpen={this.props.setSidebarOpen}
+            />)
+          }/>
           <Route path="/cr/:subject_name/:module_name/:chapter_name" component={SoloChapter}/>
           <Route 
             path="/cr/:subject_name/:module_name" 

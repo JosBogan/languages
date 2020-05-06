@@ -15,9 +15,35 @@ class Classroom extends React.Component {
 
   state = {
     user: null,
-    module: {},
+    module: null,
     chunk: {},
-    collapsed: false
+    collapsed: false,
+    openChapter: null,
+    openChunk: null,
+  }
+
+  updateUser = async (chunkId) => {
+    try {
+      const res = await axios.put('/api/auth/user/chunk/', {chunk: chunkId}, {
+        headers: {
+          Authorization: `Bearer ${Auth.getToken()}`
+        }
+      })
+      this.setState({ user: res.data })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  setSidebarOpen = (chapter = null, chunk = null) => {
+    this.setState({ openChapter: chapter, openChunk: chunk })
+  }
+
+  onSelectionClick = (event, data_name, title, single) => {
+    title ? this.setState({ openChapter: data_name }) : this.setState({ openChunk: data_name })
+    console.log(this.state.openChapter, this.state.openChunk)
+    if (single) this.setState({ openChunk: null })
+    // if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
   }
 
   // onChunkSelect = (event) => {
@@ -42,7 +68,6 @@ class Classroom extends React.Component {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
-      console.log(res.data)
       this.setState({ user: res.data })
     } catch (err) {
       console.log(err)
@@ -54,6 +79,7 @@ class Classroom extends React.Component {
   }
 
   render() {
+    if (!this.state.module) return null
     // if (!this.state.user) return null
     // if (
     //   !this.props.location.fromProps && 
@@ -77,6 +103,10 @@ class Classroom extends React.Component {
           module={this.state.module}
           onChunkSelect={this.onChunkSelect}
           collapsed={this.state.collapsed}
+          userInfo={this.state.user}
+          openChapter={this.state.openChapter}
+          openChunk={this.state.openChunk}
+          onSelectionClick={this.onSelectionClick}
         />
         <section 
           className="classroom_content_container"
@@ -88,6 +118,8 @@ class Classroom extends React.Component {
           <ClassroomContent 
             module={this.state.module} 
             collapsed={this.state.collapsed}
+            updateUser={this.updateUser}
+            setSidebarOpen={this.setSidebarOpen}
           />
         </section>
       </main>

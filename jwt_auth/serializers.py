@@ -5,6 +5,9 @@ from django.core.exceptions import ValidationError
 # import django.contrib.auth.password_validation as validations
 
 User = get_user_model()
+from chapters.models import Chapter
+from chunks.models import Chunk
+
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -30,4 +33,18 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
+        fields = '__all__'
+
+class ChunkSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Chunk
+        fields = '__all__'
+
+class ChapterSerializer(serializers.ModelSerializer):
+
+    chunks = ChunkSerializer(many=True)
+
+    class Meta:
+        model = Chapter
         fields = '__all__'
