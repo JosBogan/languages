@@ -4,7 +4,9 @@
   "pk": 1,
   "fields": {
     "name": "Declarations",
-    "data_name": "jp_1_1_1",
+    "data_name": "declarations",
+    "order": 2,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 1
   }
@@ -14,7 +16,9 @@
   "pk": 2,
   "fields": {
     "name": "Questions",
-    "data_name": "jp_1_1_2",
+    "data_name": "questions",
+    "order": 3,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 1
   }
@@ -24,7 +28,9 @@
   "pk": 3,
   "fields": {
     "name": "Possession",
-    "data_name": "jp_1_1_3",
+    "data_name": "possession",
+    "order": 4,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 1
   }
@@ -34,7 +40,9 @@
   "pk": 4,
   "fields": {
     "name": "This, That and the Other Thing",
-    "data_name": "jp_1_2_1",
+    "data_name": "this-that-and-the-other-thing",
+    "order": 1,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 2
   }
@@ -44,7 +52,9 @@
   "pk": 5,
   "fields": {
     "name": "Also/As Well",
-    "data_name": "jp_1_2_2",
+    "data_name": "also-as-well",
+    "order": 2,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 2
   }
@@ -54,7 +64,9 @@
   "pk": 6,
   "fields": {
     "name": "Not!",
-    "data_name": "jp_1_2_3",
+    "data_name": "not",
+    "order": 3,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 2
   }
@@ -64,7 +76,9 @@
   "pk": 7,
   "fields": {
     "name": "Sentence Enders",
-    "data_name": "jp_1_2_4",
+    "data_name": "sentence-enders",
+    "order": 4,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 2
   }
@@ -74,7 +88,9 @@
   "pk": 8,
   "fields": {
     "name": "Verbs",
-    "data_name": "jp_1_3_1",
+    "data_name": "verbs",
+    "order": 1,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 3
   }
@@ -84,7 +100,9 @@
   "pk": 9,
   "fields": {
     "name": "Particles",
-    "data_name": "jp_1_3_2",
+    "data_name": "particles",
+    "order": 2,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 3
   }
@@ -94,7 +112,9 @@
   "pk": 10,
   "fields": {
     "name": "Time",
-    "data_name": "jp_1_3_3",
+    "data_name": "time",
+    "order": 3,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 3
   }
@@ -104,7 +124,9 @@
   "pk": 11,
   "fields": {
     "name": "Propositions",
-    "data_name": "jp_1_3_4",
+    "data_name": "propositions",
+    "order": 4,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 3
   }
@@ -114,7 +136,9 @@
   "pk": 12,
   "fields": {
     "name": "Frequency",
-    "data_name": "jp_1_3_5",
+    "data_name": "frequency",
+    "order": 5,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 3
   }
@@ -124,19 +148,35 @@
   "pk": 13,
   "fields": {
     "name": "Sentence Structure",
-    "data_name": "jp_1_1_4",
+    "data_name": "sentence-structure",
+    "order": 5,
+    "data_type": "lesson",
     "external_link": "",
     "chapter": 1
   }
 },
 {
   "model": "chunks.chunk",
-  "pk": 14,
+  "pk": 15,
   "fields": {
-    "name": "Hiragana",
-    "data_name": "jp_1_alpha",
-    "external_link": "lang/jp/alpha/",
-    "chapter": 13
+    "name": "Test",
+    "data_name": "test",
+    "order": 6,
+    "data_type": "test",
+    "external_link": "",
+    "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 16,
+  "fields": {
+    "name": "Vocab",
+    "data_name": "vocab",
+    "order": 1,
+    "data_type": "vocab",
+    "external_link": "",
+    "chapter": 1
   }
 }
 ]

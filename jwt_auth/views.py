@@ -15,11 +15,13 @@ from rest_framework.permissions import IsAuthenticated
 
 import jwt
 
-from .serializers import UserSerializer, ChapterSerializer
+from .serializers import UserSerializer, UserProgressSerializer, ModuleProgressSerializer, ModuleNonPopProgressSerializer, ChapterNonPopProgressSerializer, ChunkNonPopProgressSerializer, UserPopulatedSerializer
 
-from chunks.models import Chunk
-from chapters.models import Chapter
+# from chunks.models import Chunk
+# from chapters.models import Chapter
 
+from modules.models import Module
+from .models import UserProgress
 User = get_user_model()
 
 # Create your views here.
@@ -30,7 +32,12 @@ class RegisterView(APIView):
         serialized_user = UserSerializer(data=request.data)
         if serialized_user.is_valid():
             serialized_user.save()
-            return Response({'message': 'registration sucessful'})
+            # print(serialized_user.data)
+            serialized_progression = UserProgressSerializer(data={'user_id': serialized_user.data['id']})
+            if serialized_progression.is_valid():
+                serialized_progression.save()
+                return Response({'message': 'registration sucessful'})
+            return Response(serialized_progression.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
         return Response(serialized_user.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
 
 class LoginView(APIView):
@@ -60,45 +67,87 @@ class UserDetailView(APIView):
 
     def get(self, request):
         try:
+            # print(print([x.id for x in request.user.progression.module_progress.all()]))
             user = User.objects.get(pk=request.user.id)
-            serialized_user = UserSerializer(user)
+            serialized_user = UserPopulatedSerializer(user)
             return Response(serialized_user.data)
         except User.DoesNotExist:
             raise PermissionDenied({'message': 'Invalid Credentials'})
 
-
-class UserAddModuleView(APIView):
-
-    permission_classes = (IsAuthenticated, )
-
-    def put(self, request):
-        try:
-            user = User.objects.get(pk=request.user.id)
-            # pre_serialized_user = UserSerializer(user)
-            user.current_modules.add(request.data['module'])
-            print(user.current_modules)
-            user.save()
-            # if serialized_user.is_valid():
-            #     serialized_user.data['current_modules'].append(request.data['module'])
-            #     serialized_user.save()
-            return Response(status=HTTP_202_ACCEPTED)
-            # return Response(serialized_user.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
-        except User.DoesNotExist:
-            raise PermissionDenied({'message': 'Invalid Credentials'})
-
-class UserAddCompletedChunk(APIView):
+class NewProgressModule(APIView):
 
     permission_classes = (IsAuthenticated, )
 
-    def put(self, request):
-        try:
-            user = User.objects.get(pk=request.user.id)
-            user.completed_chunks.add(request.data['chunk'])
-            chunk = Chunk.objects.get(pk=request.data['chunk'])
-            chapter = Chapter.objects.get(pk=chunk.chapter.id)
-            serialized_chapter = ChapterSerializer(chapter)
-            user.save()
-            serialized_user = UserSerializer(user)
-            return Response(serialized_user.data)
-        except User.DoesNotExist:
-            raise PermissionDenied({'message': 'Invalid Credentials'})
+    def post(self, request, pk):
+        if pk in [x.module_id.id for x in request.user.progression.module_progress.all()]:
+            return Response({'message': 'Modeule progress already exists'}, status=HTTP_422_UNPROCESSABLE_ENTITY)
+        module_progress = {}
+        module = Module.objects.get(pk=pk)
+        module_progress['user_progress_id'] = request.user.progression.id
+        module_progress['module_id'] = Module.objects.get(pk=pk).id
+        # module_progress['chapter_progress'] = [
+        #     {'chapter_id': x.id, 
+        #     'chunk_progress': [{'chunk_id': i.id} for i in x.chunks.all()]
+        #     } for x in module.chapters.all()]
+        serialized_module_progress = ModuleNonPopProgressSerializer(data=module_progress)
+        if serialized_module_progress.is_valid():
+            serialized_module_progress.save()
+            for chapter in module.chapters.all():
+                chapter_progress = {}
+                chapter_progress['chapter_id'] = chapter.id
+                chapter_progress['user_module_progress_id'] = serialized_module_progress.data['id']
+                serialized_chapter_progress = ChapterNonPopProgressSerializer(data=chapter_progress)
+                if serialized_chapter_progress.is_valid():
+                    serialized_chapter_progress.save()
+                    for chunk in chapter.chunks.all():
+                        chunk_progress = {}
+                        chunk_progress['chunk_id'] = chunk.id
+                        chunk_progress['user_chapter_progress_id'] = serialized_chapter_progress.data['id']
+                        serialized_chunk_progress = ChunkNonPopProgressSerializer(data=chunk_progress)
+                        if serialized_chunk_progress.is_valid():
+                            serialized_chunk_progress.save()
+                        else:
+                            return Response(serialized_chunk_progress.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+                else:
+                    return Response(serialized_chapter_progress.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({'message': 'Module progress add sucessfull'})
+        return Response(serialized_module_progress.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+
+
+
+
+# class UserAddModuleView(APIView):
+
+#     permission_classes = (IsAuthenticated, )
+
+#     def put(self, request):
+#         try:
+#             user = User.objects.get(pk=request.user.id)
+#             # pre_serialized_user = UserSerializer(user)
+#             user.current_modules.add(request.data['module'])
+#             print(user.current_modules)
+#             user.save()
+#             # if serialized_user.is_valid():
+#             #     serialized_user.data['current_modules'].append(request.data['module'])
+#             #     serialized_user.save()
+#             return Response(status=HTTP_202_ACCEPTED)
+#             # return Response(serialized_user.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
+#         except User.DoesNotExist:
+#             raise PermissionDenied({'message': 'Invalid Credentials'})
+
+# class UserAddCompletedChunk(APIView):
+
+    # permission_classes = (IsAuthenticated, )
+
+    # def put(self, request):
+    #     try:
+    #         user = User.objects.get(pk=request.user.id)
+    #         user.completed_chunks.add(request.data['chunk'])
+    #         chunk = Chunk.objects.get(pk=request.data['chunk'])
+    #         chapter = Chapter.objects.get(pk=chunk.chapter.id)
+    #         serialized_chapter = ChapterSerializer(chapter)
+    #         user.save()
+    #         serialized_user = UserSerializer(user)
+    #         return Response(serialized_user.data)
+    #     except User.DoesNotExist:
+    #         raise PermissionDenied({'message': 'Invalid Credentials'})

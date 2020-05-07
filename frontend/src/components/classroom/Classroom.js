@@ -68,6 +68,7 @@ class Classroom extends React.Component {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
+      console.log(res.data)
       this.setState({ user: res.data })
     } catch (err) {
       console.log(err)

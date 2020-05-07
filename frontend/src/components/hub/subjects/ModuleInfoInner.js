@@ -18,7 +18,9 @@ return (
           fromProps: {
             accepted: true
           }
-        }}><button onClick={props.addModuleUser}>Select</button></Link> :
+        }}><button 
+          onClick={props.addModuleUser}
+        >Select</button></Link> :
         <Link to="/login"><button>Login</button></Link>
       }
         <button className="cancel_button" onClick={props.toggleModal}>Cancel</button>

@@ -25,7 +25,7 @@ class TestContent extends React.Component {
 
   updateCorrect = () => {
     const score = this.state.correct + 1
-    if (score >= this.state.questions.translate.length) this.props.updateUser(this.props.chunkId)
+    // if (score >= this.state.questions.translate.length) this.props.updateUser(this.props.chunkId)
     this.setState({ correct: score })
   }
 

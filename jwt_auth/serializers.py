@@ -5,9 +5,73 @@ from django.core.exceptions import ValidationError
 # import django.contrib.auth.password_validation as validations
 
 User = get_user_model()
+from .models import UserProgress, ModuleProgress, ChapterProgress, ChunkProgress
 from chapters.models import Chapter
 from chunks.models import Chunk
 
+class ChunkNonPopProgressSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ChunkProgress
+        fields = '__all__'
+
+class ChapterNonPopProgressSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ChapterProgress
+        fields = '__all__'
+
+class ModuleNonPopProgressSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ModuleProgress
+        fields = '__all__'
+
+class ChunkProgressSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ChunkProgress
+        fields = '__all__'
+
+class ChapterProgressSerializer(serializers.ModelSerializer):
+
+    chunk_progress = ChunkProgressSerializer(many=True)
+
+    class Meta:
+        model = ChapterProgress
+        fields = '__all__'
+
+class ModuleProgressSerializer(serializers.ModelSerializer):
+
+    chapter_progress = ChapterProgressSerializer(many=True)
+
+    class Meta:
+        model = ModuleProgress
+        fields = '__all__'
+
+class UserProgressPopulatedSerializer(serializers.ModelSerializer):
+
+    module_progress = ModuleProgressSerializer(many=True)
+
+    class Meta:
+        model = UserProgress
+        fields = '__all__'
+
+class UserProgressSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = UserProgress
+        fields = '__all__'
+
+class UserPopulatedSerializer(serializers.ModelSerializer):
+
+    password = serializers.CharField(write_only=True)
+    password_confirmation = serializers.CharField(write_only=True)
+    progression = UserProgressPopulatedSerializer()
+
+    class Meta:
+        model = User
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -30,21 +94,23 @@ class UserSerializer(serializers.ModelSerializer):
         data['password'] = make_password(password)
 
         return data
+    
+    # progression = UserProgressPopulatedSerializer()
 
     class Meta:
         model = User
         fields = '__all__'
 
-class ChunkSerializer(serializers.ModelSerializer):
+# class ChunkSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = Chunk
-        fields = '__all__'
+#     class Meta:
+#         model = Chunk
+#         fields = '__all__'
 
-class ChapterSerializer(serializers.ModelSerializer):
+# class ChapterSerializer(serializers.ModelSerializer):
 
-    chunks = ChunkSerializer(many=True)
+#     chunks = ChunkSerializer(many=True)
 
-    class Meta:
-        model = Chapter
-        fields = '__all__'
+#     class Meta:
+#         model = Chapter
+#         fields = '__all__'

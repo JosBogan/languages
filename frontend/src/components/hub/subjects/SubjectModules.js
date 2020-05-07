@@ -37,15 +37,30 @@ class SubjectModules extends React.Component {
     this.setState({ modalModule: module})
   }
 
+  // addModuleUser = async () => {
+  //   try {
+  //     const res = await axios.put('/api/auth/user/module/', 
+  //     { module: this.state.modalModule.id }, 
+  //     {
+  //       headers: {
+  //         Authorization: `Bearer ${Auth.getToken()}`
+  //       }
+  //     })
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // }
+
   addModuleUser = async () => {
+    console.log('hello before')
     try {
-      const res = await axios.put('/api/auth/user/module/', 
-      { module: this.state.modalModule.id }, 
+      const res = await axios.post(`/api/auth/user/new_progress_module/${this.state.modalModule.id}/`, {},
       {
         headers: {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
+      console.log('hello with data', res.data)
     } catch (err) {
       console.log(err)
     }
