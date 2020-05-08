@@ -40,13 +40,12 @@ class SubjectModules extends React.Component {
   addModuleUser = async () => {
     if (!!this.props.progression.find(x => x.module_id === this.state.modalModule.id)) return
     try {
-      const res = await axios.post(`/api/auth/user/progress/module/${this.state.modalModule.id}/`, {},
+      await axios.post(`/api/auth/user/progress/module/${this.state.modalModule.id}/`, {},
       {
         headers: {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
-      // console.log('hello with data', res.data)
     } catch (err) {
       console.log(err)
     }

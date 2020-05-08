@@ -126,9 +126,13 @@
 .module_description_content {
   overflow: scroll;
   height: 100%;
-  margin: 0 -40px;
-  padding: 0 40px;
+  margin: 0 -50px;
+  padding: 0 50px;
   flex: 1;
+}
+
+.module_description_rule {
+  margin: 0 -50px;
 }
 
 .module_info_upper ul {

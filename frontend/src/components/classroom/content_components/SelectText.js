@@ -1,5 +1,4 @@
 import React from 'react'
-import Parse from '../../../lib/parse'
 
 class SelectText extends React.Component {
 
@@ -15,7 +14,7 @@ class SelectText extends React.Component {
   }
 
   componentDidMount() {
-    const components = Parse.looseParse(this.props.text)
+    const components = JSON.parse(this.props.text)
     const textSegments = components[0]
     const relatedTextSegments = components[1]
     this.setState({ textSegments, relatedTextSegments })

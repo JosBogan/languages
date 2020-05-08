@@ -1,7 +1,6 @@
 import React from 'react'
 import Markdown from 'markdown-to-jsx'
 
-import Parse from '../../../lib/parse'
 
 
 class TextComparison extends React.Component {
@@ -15,7 +14,7 @@ class TextComparison extends React.Component {
   componentDidMount() {
     const regex = new RegExp(`(${this.props.highlighted})`, 'g')
     const split = this.props.highlighted ? this.props.highlighted.split('|') : null
-    this.setState({ textSegments: Parse.looseParse(this.props.text), regex, split })
+    this.setState({ textSegments: JSON.parse(this.props.text), regex, split })
   }
 
   highlightText = (data) => {

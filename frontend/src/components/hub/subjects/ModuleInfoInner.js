@@ -18,7 +18,7 @@ function ModuleInfoInner(props) {
       <div className="module_modal_inner">
         <div className="module_info_upper">
           <h2 className="module_description_header">{props.module.name}</h2>
-          <hr />
+          <hr className="module_description_rule"/>
           <div className="module_description_content">
             <h4 className="module_description_subheader">What this module will teach you:</h4>
             <Markdown>

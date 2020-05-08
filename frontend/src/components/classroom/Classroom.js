@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
-import { Redirect } from 'react-router-dom'
 
 import Sidebar from './sidebar/Sidebar'
 import ClassroomContent from './ClassroomContent'
@@ -34,7 +33,6 @@ class Classroom extends React.Component {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
-      console.log(res)
       this.setState({ user: res.data })
     } catch (err) {
       console.log(err)
@@ -47,7 +45,6 @@ class Classroom extends React.Component {
 
   onSelectionClick = (event, data_name, title, single) => {
     title ? this.setState({ openChapter: data_name }) : this.setState({ openChunk: data_name })
-    console.log(this.state.openChapter, this.state.openChunk)
     if (single) this.setState({ openChunk: null })
     // if (single) this.props.history.push(`/${this.props.match.params.data_name}/${this.props.match.params.module_name}/${data_name}`)
   }
@@ -60,7 +57,6 @@ class Classroom extends React.Component {
     const data_name = this.props.match.params.module_name.toLowerCase()
     try {
       const res = await axios.get(`/api/modules/${data_name}`)
-      console.log(res.data)
       this.setState({ module: res.data })
     } catch (err) {
       console.log(err)
@@ -75,7 +71,6 @@ class Classroom extends React.Component {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
-      console.log(res.data)
       this.setState({ user: res.data })
     } catch (err) {
       console.log(err)

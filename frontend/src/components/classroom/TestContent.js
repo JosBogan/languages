@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Back from './common/Back'
-import Next from './common/Next'
+// import Next from './common/Next'
 
 import DirectQuestion from './DirectQuestion'
 
