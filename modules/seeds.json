@@ -5,7 +5,20 @@
   "fields": {
     "name": "Japanese 1",
     "data_name": "jp_1",
-    "subject": 1
+    "getting_started": "Welcome to Japanese 1! I sinceely hope that you enjoy the course that we have put together for you. Before you get started however, there are a couple of things that will help enhance your learning experince, so please have a quick read of the information below.\u21b5\u21b5###Keyboard Setup\u21b5\u21b5Throughout the course, there will be plenty of oppertunities for you to answer questions and type in Japanese. This will require using a Japanese keyboard, and whilst we do have an onscreen keyboard that you can click, we highly recommend adding the japanes keyboard input to your computer as shown below to make for a faster and more seamless experience.",
+    "subject": 1,
+    "description": "This module is designed for total beginners to Japanese. We will start with the Japanese alphabet and then go on to foundational vocabulary and grammer.\u21b5\u21b5* Hiragana\u21b5* Katakan\u21b5* Kanji\u21b5* Sentence Structure\u21b5* Possession\u21b5* Questions\u21b5* Verb Conjugarions\u21b5* Comparisons\u21b5* Adjective Conjugation\u21b5* Formal Speech\u21b5* Casual Speech"
+  }
+},
+{
+  "model": "modules.module",
+  "pk": 2,
+  "fields": {
+    "name": "Japanese 2",
+    "data_name": "jp_2",
+    "getting_started": "",
+    "subject": 1,
+    "description": ""
   }
 }
 ]

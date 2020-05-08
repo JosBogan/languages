@@ -7,19 +7,30 @@
   height: 70vh;
   display: flex;
   background-color: var(--primary);
-  background-image: url(../../assets/1963637-009688.svg);
-  background-position: left;
+  background-image: url(../../assets/hero_copy.svg);
+  background-position: bottom left;
   background-size: contain;
   background-repeat: no-repeat;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+}
+
+.main_hero_text {
+  color: white;
+  margin-bottom: 80px;
 }
 
 .landing_view_courses {
   padding: 10px 20px;
   margin: 0 20px;
-  background: white;
+  background-color: var(--secondary);
+  color: white;
   border-radius: 10px;
-  border: 1px solid rgb(177, 177, 177);
+  transition: all 0.1s;
+  /* border: 1px solid rgb(177, 177, 177); */
+}
+
+.landing_view_courses:hover {
+  background-color: var(--secondary_shade);
 }

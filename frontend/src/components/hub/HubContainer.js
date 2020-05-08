@@ -43,13 +43,13 @@ class HubContainer extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div>
         <Navbar />
         <div className="main_offset">
         <Switch>
             <SecureRoute path="/dashboard" component={UserPage}/>
+            {/* <Route path="/login" render={(props) => <UnSecureRoute path="/login" {...props} component={Login} getUser={this.getUser}/>}/> */}
             <UnSecureRoute path="/login" component={Login}/>
             <UnSecureRoute path="/register" component={Register}/> 
             <Route path="/subjects" component={SubjectIndex}/>
@@ -57,8 +57,10 @@ class HubContainer extends React.Component {
             <Route path="/:data_name/" component={SubjectModules}/> :
             <Route             
               path="/:data_name/" 
-              render={(props) => <SubjectModules {...props} progression={this.state.user.progression}/>}/>}
-            <Route path="/" component={Landing}/>
+              render={(props) => <SubjectModules {...props} progression={this.state.user.progression.module_progress}/>}/>}
+            <Route             
+              path="/" 
+              render={(props) => <Landing {...props} getUser={this.getUser}/>}/>
         </Switch>
         </div>
       </div>

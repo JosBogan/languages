@@ -84,17 +84,25 @@
   color: var(--blue);
 }
 
-.selelect_text_container {
+.select_text_container {
   align-self: center;
+  margin-bottom: 40px;
 }
 
 .select_text {
   color: var(--blue);
   font-weight: 800;
+  font-size: 18px;
   /* border-bottom: 2px solid var(--blue); */
   padding: 2px 5px;
 }
 
 .select_text_selected {
   border-bottom: 2px solid var(--blue);
+}
+
+.select_text_related {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
 }

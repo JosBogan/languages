@@ -60,7 +60,7 @@
   "fields": {
     "data_name": "bdfsgfd",
     "title": "Sentence Structure",
-    "content": "As you have have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**\u21b5\u21b5<p class=\"text_alone\">I am a student</p>\u21b5\u21b5Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.\u21b5\u21b5<p class=\"text_alone\">\u308f\u305f\u3057\u306f\u3000\u304c\u304f\u305b\u3044\u3000\u3067\u3059</p>\u21b5\u21b5Whilst this will take some time to get used to so don\\'t worry if it inially takes you some time to figure out what each sentence is saying!",
+    "content": "As you may have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**\u21b5\u21b5<p class=\"text_alone\">I am a student</p>\u21b5\u21b5Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.\u21b5\u21b5<SelectText text={[[\"\u308f\u305f\u3057\", \"\u306f\", \"\u304c\u304f\u305b\u3044\", \"\u3067\u3059\"], [\"Subject/Topic\", \"Particle\", \"Object\", \"Verb\"]]}/>Whilst this will take some time to get used to so don\\'t worry if it inially takes you some time to figure out what each sentence is saying!",
     "chunk": 13,
     "page_no": 1
   }

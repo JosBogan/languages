@@ -4,26 +4,36 @@ import Parse from '../../../lib/parse'
 class SelectText extends React.Component {
 
   state = {
-    textSegments: []
+    textSegments: [],
+    relatedTextSegments: [],
+    selectedText: 0
+  }
+
+  onSelectText = (event) => {
+    const selectedText = event.target.id
+    this.setState({ selectedText })
   }
 
   componentDidMount() {
-    this.setState({ textSegments: Parse.looseParse(this.props.text) })
+    const components = Parse.looseParse(this.props.text)
+    const textSegments = components[0]
+    const relatedTextSegments = components[1]
+    this.setState({ textSegments, relatedTextSegments })
   }
 
   render() {
-    console.log(this.props.selectedText)
     return (
-      <p className="selelect_text_container">
+      <div className="select_text_container">
         {this.state.textSegments.map((component, index) => (
           <span 
-            className={`select_text ${parseInt(this.props.selectedText) === index ? 'select_text_selected' : ''}`}
+            className={`select_text ${parseInt(this.state.selectedText) === index ? 'select_text_selected' : ''}`}
             key={index}
             id={index}
-            onClick={this.props.onSelectText}
+            onClick={this.onSelectText}
           >{component}</span>
         ))}
-      </p>
+        <p className="select_text_related">{this.state.relatedTextSegments[this.state.selectedText]}</p>
+      </div>
     )
   }
 }

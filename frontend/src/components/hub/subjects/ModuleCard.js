@@ -3,7 +3,6 @@ import React from 'react'
 // import { Link } from 'react-router-dom'
 
 function ModuleCard(props) {
-
   return (
     // <Link to={`${props.urlcomp}`}>
       <div 
@@ -19,7 +18,12 @@ function ModuleCard(props) {
         </div>
         <div className="module_card_progress_containter">
           <div className="progress_bar_container">
-            <div className="progress_bar"></div>
+            <div 
+              className="progress_bar"
+              style={{
+                width: `${props.progression}%`
+              }}
+            ></div>
           </div>
         </div>
       </div>

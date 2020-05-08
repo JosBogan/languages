@@ -12,9 +12,8 @@ class PageContent extends React.Component {
   state = {
     page: null,
     text: '',
-    textTest: 'The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following structure:↵↵<p class="text_alone blue_text">\\_\\_\\_\\_\\_\\_は \\_\\_\\_\\_\\_\\_です</p><TextComparison text={[["I am a teacher", "わたしはせんせいです"], ["Takeshi is a student", "たけしはがくせいです"], ["The teacher is english", "せんせはイギリスじんです"]]}/>**は** is the <span class="blue_text">**topic particle**</span> and indicates the topic of the sentence that comes just before. **です** is a copula verb that means **"to be"** or **"is"**.↵↵<sup>Note: whilst **は** is ordinarily pronounced **ha**, when used as a particle it is pronounced **wa**</sup>',
-    textTest2: 'As you have have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**↵↵<p class="text_alone">I am a student</p>↵↵Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.↵↵<p class="text_alone">わたしは　がくせい　です</p>↵↵Whilst this will take some time to get used to so don\'t worry if it inially takes you some time to figure out what each sentence is saying!',
-    selectText: null
+    textTest: 'The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following <HoverText text={structure}/>:↵↵<p class="text_alone">\\_\\_\\_\\_\\_\\_は \\_\\_\\_\\_\\_\\_です</p><TextComparison text={[["I am a teacher", "わたしはせんせいです"]]}/>In the rest of the lesson, we’ll cover five **classes of complexity** in algorithms; in other words, break down the “highly efficient,” “pretty good,” and “inefficient” groups that we just discussed.↵↵<SelectText text={[["This is a", "test sentence"], ["Text one", "Text two"]]} />↵↵Here they are:↵↵| Highly Efficient | Pretty Good | Inefficient |↵| --- | --- | --- |↵| Constant complexity | Linear complexity | Quadratic complexity |↵| Logarithmic complexity | | Factorial complexity |',
+    textTest2: 'As you have have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**↵↵<p class="text_alone">I am a student</p>↵↵Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.↵↵<SelectText text={[["わたし", "は", "がくせい", "です"], ["Subject/Topic", "Particle", "Object", "Verb"]]}/>Whilst this will take some time to get used to so don\'t worry if it inially takes you some time to figure out what each sentence is saying!',
   }
 
   componentDidMount() {
@@ -33,10 +32,6 @@ class PageContent extends React.Component {
 
   textConversion = (input) => {
     return input.replace(/↵/g, '\n')
-  }
-
-  onSelectText = (event) => {
-    this.setState({ selectText: event.target.id })
   }
 
   render(){
@@ -60,11 +55,7 @@ class PageContent extends React.Component {
                   }
                 },
                 SelectText: {
-                  component: SelectText,
-                  props: {
-                    onSelectText: this.onSelectText,
-                    selectedText: this.state.selectText
-                  }
+                  component: SelectText
                 },
                 TextComparison: {
                   component: TextComparison,

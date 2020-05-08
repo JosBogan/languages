@@ -84,7 +84,7 @@
 
 .progress_bar {
   height: 100%;
-  width: 50%;
+  /* width: 50%; */
   background-color: var(--green);
 }
 
@@ -117,6 +117,22 @@
 
 .module_info_upper {
   flex: 1;
+  padding: 40px 50px 0 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.module_description_content {
+  overflow: scroll;
+  height: 100%;
+  margin: 0 -40px;
+  padding: 0 40px;
+  flex: 1;
+}
+
+.module_info_upper ul {
+  margin: 20px 10px;
 }
 
 .module_info_buttons {
@@ -134,10 +150,32 @@
 
 .module_info_buttons a, button {
   flex: 1;
+  transition: all 0.1s;
 }
 
 .cancel_button {
-  background-color: red;
-  background-color: rgba(	255, 56, 56, 1);
+  background-color: var(--secondary);
   color: white;
+}
+
+.select_button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.select_button:hover {
+  background-color: #ce5e41;;
+}
+
+
+.cancel_button:hover {
+  background-color: #1a1f29;
+}
+
+.module_description_header {
+  margin-bottom: 20px;
+}
+
+.module_description_subheader {
+  margin: 20px 0;
 }

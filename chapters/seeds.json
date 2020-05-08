@@ -4,8 +4,10 @@
   "pk": 1,
   "fields": {
     "name": "Chapter 1",
-    "data_name": "jp_1_1",
+    "single": false,
+    "data_name": "chapter-1",
     "order": 2,
+    "external_link": "",
     "module": 1
   }
 },
@@ -14,8 +16,10 @@
   "pk": 2,
   "fields": {
     "name": "Chapter 2",
-    "data_name": "jp_1_2",
+    "single": false,
+    "data_name": "chapter-2",
     "order": 3,
+    "external_link": "",
     "module": 1
   }
 },
@@ -24,8 +28,10 @@
   "pk": 3,
   "fields": {
     "name": "Chapter 3",
-    "data_name": "jp_1_3",
+    "single": false,
+    "data_name": "chapter-3",
     "order": 4,
+    "external_link": "",
     "module": 1
   }
 },
@@ -34,8 +40,10 @@
   "pk": 4,
   "fields": {
     "name": "Chapter 4",
-    "data_name": "jp_1_4",
+    "single": false,
+    "data_name": "chapter-4",
     "order": 5,
+    "external_link": "",
     "module": 1
   }
 },
@@ -44,8 +52,10 @@
   "pk": 5,
   "fields": {
     "name": "Chapter 5",
-    "data_name": "jp_1_5",
+    "single": false,
+    "data_name": "chapter-5",
     "order": 6,
+    "external_link": "",
     "module": 1
   }
 },
@@ -54,8 +64,10 @@
   "pk": 6,
   "fields": {
     "name": "Chapter 6",
-    "data_name": "jp_1_6",
+    "single": false,
+    "data_name": "chapter-6",
     "order": 7,
+    "external_link": "",
     "module": 1
   }
 },
@@ -64,8 +76,10 @@
   "pk": 7,
   "fields": {
     "name": "Chapter 7",
-    "data_name": "jp_1_7",
+    "single": false,
+    "data_name": "chapter-7",
     "order": 8,
+    "external_link": "",
     "module": 1
   }
 },
@@ -74,8 +88,10 @@
   "pk": 8,
   "fields": {
     "name": "Chapter 8",
-    "data_name": "jp_8",
+    "single": false,
+    "data_name": "chapter-8",
     "order": 9,
+    "external_link": "",
     "module": 1
   }
 },
@@ -84,8 +100,10 @@
   "pk": 9,
   "fields": {
     "name": "Chapter 9",
-    "data_name": "jp_1_9",
+    "single": false,
+    "data_name": "chapter-9",
     "order": 10,
+    "external_link": "",
     "module": 1
   }
 },
@@ -94,8 +112,10 @@
   "pk": 10,
   "fields": {
     "name": "Chapter 10",
-    "data_name": "jp_1_10",
+    "single": false,
+    "data_name": "chapter-10",
     "order": 11,
+    "external_link": "",
     "module": 1
   }
 },
@@ -104,8 +124,10 @@
   "pk": 11,
   "fields": {
     "name": "Chapter 11",
-    "data_name": "jp_1_11",
+    "single": false,
+    "data_name": "chapter-11",
     "order": 12,
+    "external_link": "",
     "module": 1
   }
 },
@@ -114,8 +136,10 @@
   "pk": 12,
   "fields": {
     "name": "Chapter 12",
-    "data_name": "jp_1_12",
+    "single": false,
+    "data_name": "chapter-12",
     "order": 13,
+    "external_link": "",
     "module": 1
   }
 },
@@ -124,8 +148,10 @@
   "pk": 13,
   "fields": {
     "name": "Alphabet",
-    "data_name": "jp_1_alpha",
+    "single": true,
+    "data_name": "alpha",
     "order": 1,
+    "external_link": "lang/jp/alpha/",
     "module": 1
   }
 }

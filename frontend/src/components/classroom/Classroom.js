@@ -23,7 +23,11 @@ class Classroom extends React.Component {
   }
 
   updateProgress = async (chunkId) => {
-    console.log('chunk update', chunkId)
+    const alreadyCompleted = this.state.user.progression.module_progress
+        .find(module => module.module_id === this.state.module.id).chapter_progress
+          .map(chapter => chapter.chunk_progress).flat()
+            .find(chunk => chunk.chunk_id === chunkId).completed
+    if (alreadyCompleted) return console.log('already Completed')
     try {
       const res = await axios.put(`/api/auth/user/progress/chunk/${chunkId}/`, {module_id: this.state.module.id}, {
         headers: {
@@ -56,6 +60,7 @@ class Classroom extends React.Component {
     const data_name = this.props.match.params.module_name.toLowerCase()
     try {
       const res = await axios.get(`/api/modules/${data_name}`)
+      console.log(res.data)
       this.setState({ module: res.data })
     } catch (err) {
       console.log(err)
@@ -119,7 +124,8 @@ class Classroom extends React.Component {
         >
           {/* {console.log(this.state.module)} */}
           <ClassroomContent 
-            module={this.state.module} 
+            module={this.state.module}
+            // userProgress={this.state.user}
             collapsed={this.state.collapsed}
             updateProgress={this.updateProgress}
             setSidebarOpen={this.setSidebarOpen}

@@ -38,7 +38,7 @@ class SubjectModules extends React.Component {
   }
 
   addModuleUser = async () => {
-    console.log('hello before')
+    if (!!this.props.progression.find(x => x.module_id === this.state.modalModule.id)) return
     try {
       const res = await axios.post(`/api/auth/user/progress/module/${this.state.modalModule.id}/`, {},
       {
@@ -46,7 +46,7 @@ class SubjectModules extends React.Component {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
-      console.log('hello with data', res.data)
+      // console.log('hello with data', res.data)
     } catch (err) {
       console.log(err)
     }
@@ -67,7 +67,14 @@ class SubjectModules extends React.Component {
               <ModuleCard 
                 key={module.data_name} 
                 // urlcomp={`/cr/${this.state.subject}/${module.data_name}`} 
+                // progression={this.props.progression && this.pr}
                 module={module}
+                progression={
+                  this.props.progression && 
+                  !!this.props.progression.find(x => x.module_id === module.id) ?
+                  this.props.progression.find(x => x.module_id === module.id).progress : 
+                  0
+                }
                 subject={this.state.subject}
                 toggleModal={this.toggleModal}
                 setModal={this.setModal}

@@ -10,6 +10,7 @@ class Landing extends React.Component {
 
 
   async componentDidMount() {
+    this.props.getUser()
     try {
       const res = await axios.get('/api/subjects/')
       this.setState({ subjects: res.data })
@@ -25,7 +26,7 @@ class Landing extends React.Component {
           <nav></nav>
         </header>
         <section className="main_hero">
-          <h1>Languages Galore</h1>
+          <h1 className="main_hero_text">Placeholder Text</h1>
           <div>
             <Link className="landing_view_courses" to="/subjects" >View our Subjects</Link>
           </div>
