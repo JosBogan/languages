@@ -22,13 +22,15 @@ class Classroom extends React.Component {
     openChunk: null,
   }
 
-  updateUser = async (chunkId) => {
+  updateProgress = async (chunkId) => {
+    console.log('chunk update', chunkId)
     try {
-      const res = await axios.put('/api/auth/user/chunk/', {chunk: chunkId}, {
+      const res = await axios.put(`/api/auth/user/progress/chunk/${chunkId}/`, {module_id: this.state.module.id}, {
         headers: {
           Authorization: `Bearer ${Auth.getToken()}`
         }
       })
+      console.log(res)
       this.setState({ user: res.data })
     } catch (err) {
       console.log(err)
@@ -119,7 +121,7 @@ class Classroom extends React.Component {
           <ClassroomContent 
             module={this.state.module} 
             collapsed={this.state.collapsed}
-            updateUser={this.updateUser}
+            updateProgress={this.updateProgress}
             setSidebarOpen={this.setSidebarOpen}
           />
         </section>

@@ -39,7 +39,7 @@ class ClassroomContent extends React.Component {
           render={(props) => (
             <Page {...props} 
               collapsed={this.props.collapsed} 
-              updateUser={this.props.updateUser}
+              updateProgress={this.props.updateProgress}
               setSidebarOpen={this.props.setSidebarOpen}
             />)
           }/>

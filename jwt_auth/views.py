@@ -21,6 +21,7 @@ from .serializers import UserSerializer, UserProgressSerializer, ModuleProgressS
 # from chapters.models import Chapter
 
 from modules.models import Module
+from chunks.models import Chunk
 from .models import UserProgress
 User = get_user_model()
 
@@ -113,6 +114,39 @@ class NewProgressModule(APIView):
             return Response({'message': 'Module progress add sucessfull'})
         return Response(serialized_module_progress.errors, status=HTTP_422_UNPROCESSABLE_ENTITY)
 
+class ChunkCompleted(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def put(self, request, pk):
+        chunk = Chunk.objects.get(pk=pk)
+        progress_module = request.user.progression.module_progress.get(module_id=request.data['module_id'])
+        progress_chapter = progress_module.chapter_progress.get(chapter_id=chunk.chapter.id)
+        progress_chunk = progress_chapter.chunk_progress.get(chunk_id=pk)
+        progress_chunk.completed = True
+        progress_chunk.save()
+        # Save Chunk Progress
+        chunks_completed_value = progress_chapter.chunk_progress.values_list('completed', flat=True)
+        chunks_completed = [x for x in chunks_completed_value if x == True]
+        chapter_percent = (len(chunks_completed) / len(chunks_completed_value)) * 100
+        progress_chapter.progress = chapter_percent
+        progress_chapter.save()
+        # Add Chapter completion in model and apply percentage here
+        if chapter_percent == 100:
+            progress_chapter.completed = True
+            progress_chapter.save()
+            chapters_completed_value = progress_module.chapter_progress.values_list('completed', flat=True)
+            chapters_completed = [x for x in chapters_completed_value if x == True]
+            if len(chapters_completed_value) == len(chapters_completed):
+                progress_module.completed == True
+                progress_module.save()
+        chapters_completion_progress = progress_module.chapter_progress.values_list('progress', flat=True)
+        module_percent = (sum(chapters_completion_progress) / (len(chapters_completion_progress) * 100)) * 100
+        progress_module.progress = module_percent
+        progress_module.save()
+        user = User.objects.get(pk=request.user.id)
+        serialized_user = UserPopulatedSerializer(user)
+        return Response(serialized_user.data)
 
 
 

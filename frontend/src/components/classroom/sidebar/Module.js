@@ -14,6 +14,8 @@ function Module(props) {
         title={true}
         text={props.data.name}
         data_name={props.data.data_name}
+        id={props.data.id}
+        chapterProgress={props.chapterProgress}
       /> : 
       <Link to={`/cr/${props.subject}/${props.module}/${props.data.data_name}/`}>
       <ModuleInner 
@@ -23,6 +25,8 @@ function Module(props) {
         single={props.single}
         text={props.data.name}
         data_name={props.data.data_name}
+        id={props.data.id}
+        chapterProgress={props.chapterProgress}
       />
       </Link> 
       }
@@ -44,6 +48,8 @@ function Module(props) {
               text={chunk.name}
               data_name={chunk.data_name}
               open={props.openChunk === chunk.data_name}
+              id={chunk.id}
+              chunkProgress={props.chunkProgress}
               />
             </Link>
           )
@@ -55,6 +61,8 @@ function Module(props) {
                 title={false}
                 text={chunk.name}
                 data_name={chunk.data_name}
+                id={chunk.id}
+                chunkProgress={props.chunkProgress}
                 open={props.openChunk === chunk.data_name}
                 />
               </Link>
@@ -67,6 +75,8 @@ function Module(props) {
                   title={false}
                   text={chunk.name}
                   data_name={chunk.data_name}
+                  id={chunk.id}
+                  chunkProgress={props.chunkProgress}
                   open={props.openChunk === chunk.data_name}
                 />
               </Link>

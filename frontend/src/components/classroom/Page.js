@@ -66,10 +66,11 @@ class Page extends React.Component {
             render={(props) => (
               <TestContent {...props} 
                 questions={this.state.chunk.questions} 
-                pathURL={`${this.props.match.url}/`} 
+                pathURL={`${this.props.match.url}/`}
+                // nextChunkPathURL={}
                 collapsed={this.props.collapsed}
                 totalPages={this.state.chunk.pages.length}
-                updateUser={this.props.updateUser}
+                updateProgress={this.props.updateProgress}
                 chunkId={this.state.chunk.id}
               />
             )}

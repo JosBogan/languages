@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Back from './common/Back'
+import Next from './common/Next'
 
 import DirectQuestion from './DirectQuestion'
 
@@ -25,7 +26,7 @@ class TestContent extends React.Component {
 
   updateCorrect = () => {
     const score = this.state.correct + 1
-    // if (score >= this.state.questions.translate.length) this.props.updateUser(this.props.chunkId)
+    if (score >= this.state.questions.translate.length) this.props.updateProgress(this.props.chunkId)
     this.setState({ correct: score })
   }
 
@@ -49,6 +50,9 @@ class TestContent extends React.Component {
           </div>
         ))}
         </div>
+        {/* {this.state.score >= this.state.questions.translate.length &&
+          <Next path={`${this.props.pathURL}/1/`}/> // CHANGE PATH
+        } */}
       </div>
     )
   }

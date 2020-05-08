@@ -26,6 +26,7 @@ class ModuleProgress(models.Model):
 
 class ChapterProgress(models.Model):
 
+    progress = models.IntegerField(default=0)
     completed = models.BooleanField(default=False)
     user_module_progress_id = models.ForeignKey(ModuleProgress, related_name='chapter_progress', on_delete=models.CASCADE)
     chapter_id = models.ForeignKey('chapters.Chapter', related_name='users', on_delete=models.CASCADE)

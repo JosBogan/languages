@@ -131,3 +131,13 @@
 .sidebar_nav li:hover {
   transform: scale(1.2);
 }
+
+.module_container:hover .sidebar_module_completed {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.module_container .sidebar_module_completed {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}

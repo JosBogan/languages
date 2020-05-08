@@ -14,7 +14,12 @@ function ModuleInner(props) {
 
         }}
         >
-        <div className={'module_circle'}></div>
+        <div 
+          className={`module_circle ${
+            props.title ? props.chapterProgress.includes(props.id) ? 'sidebar_module_completed' : '' :
+            props.chunkProgress.includes(props.id) ? 'sidebar_module_completed' : ''
+          }`}
+        ></div>
         <div className="module_line"></div>
         <div className="module_name">{props.text}</div>
       </div>

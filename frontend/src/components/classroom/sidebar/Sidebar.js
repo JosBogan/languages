@@ -12,7 +12,9 @@ class Sidebar extends React.Component {
     open: null,
     openChunk: null,
     initialChapter: null,
-    module: null
+    module: null,
+    chunkProgress: [],
+    chapterProgress: []
   }
 
   componentDidUpdate(prevProps, prevState, snapshop) {
@@ -20,7 +22,20 @@ class Sidebar extends React.Component {
     module.chapters.sort((a, b) => a.order - b.order)
     if (prevProps !== this.props) {
       this.setState({ module })
+      this.settingProgress()
     }
+  }
+
+  settingProgress = () => {
+    const chapterProgress = this.props.userInfo ? this.props.userInfo.progression.module_progress
+      .find(module => module.module_id === this.props.module.id).chapter_progress.filter(chapter => chapter.completed === true) :
+      []
+    const chunkProgress = this.props.userInfo ? this.props.userInfo.progression.module_progress
+      .find(module => module.module_id === this.props.module.id).chapter_progress
+      .map(chapter_progress => chapter_progress.chunk_progress)
+      .flat().filter(chunk => chunk.completed === true).map(chunk => chunk.chunk_id) :
+      []
+    this.setState({ chapterProgress, chunkProgress })
   }
 
   // onModuleClick = (event, data_name, title, single) => {
@@ -55,6 +70,8 @@ class Sidebar extends React.Component {
                 // openChunk={this.state.openChunk}
                 openChapter={this.props.openChapter}
                 openChunk={this.props.openChunk}
+                chunkProgress={this.state.chunkProgress}
+                chapterProgress={this.state.chapterProgress}
                 data={chapter}
                 module={this.state.module.data_name}
                 single={chapter.single}
