@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+import Auth from '../../lib/auth'
+
 class Landing extends React.Component {
 
   state = {
@@ -10,7 +12,7 @@ class Landing extends React.Component {
 
 
   async componentDidMount() {
-    this.props.getUser()
+    if (Auth.isAuthenticated()) this.props.getUser()
     try {
       const res = await axios.get('/api/subjects/')
       this.setState({ subjects: res.data })
