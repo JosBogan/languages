@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import axios from 'axios'
 // import Module from '../classroom/sidebar/Module'
@@ -37,7 +37,14 @@ class SubjectModules extends React.Component {
     this.setState({ modalModule: module})
   }
 
+  directLink = (module) => {
+    console.log('redirect')
+    this.props.history.push(`/cr/${this.state.subject}/${module.data_name}`)
+    // return <Redirect to={`/cr/${this.state.subject}/${module.data_name}`}/>
+  } 
+
   addModuleUser = async () => {
+    console.log('this user has already joing this module', !!this.props.progression.find(x => x.module_id === this.state.modalModule.id))
     if (!!this.props.progression.find(x => x.module_id === this.state.modalModule.id)) return
     try {
       await axios.post(`/api/auth/user/progress/module/${this.state.modalModule.id}/`, {},
@@ -64,7 +71,8 @@ class SubjectModules extends React.Component {
           <div className="subject_page_modules_contatiner">
             {this.state.modules.map(module => (
               <ModuleCard 
-                key={module.data_name} 
+                key={module.data_name}
+                userStarted={this.props.progression && this.props.progression.find(x => x.module_id === module.id)}
                 // urlcomp={`/cr/${this.state.subject}/${module.data_name}`} 
                 // progression={this.props.progression && this.pr}
                 module={module}
@@ -77,6 +85,7 @@ class SubjectModules extends React.Component {
                 subject={this.state.subject}
                 toggleModal={this.toggleModal}
                 setModal={this.setModal}
+                directLink={this.directLink}
               />
               // <Link key={module.data_name} to={`/${this.state.subject}/${module.data_name}`}>{module.name}</Link>
             ))}

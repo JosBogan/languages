@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 0 40px;
   transition: box-shadow 0.2s;
+  z-index: 1;
 }
 
 .nav_box_shadow {
@@ -34,6 +35,18 @@
 
 
 .navbar_auth_link:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 3px;
+  /* border-radius: 0 0 3px 3px; */
+  background-color: var(--primary);
+  /* border-top: 2px solid var(--primary); */
+}
+
+.nav_auth_link_selected::before {
   content: "";
   position: absolute;
   width: 100%;

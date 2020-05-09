@@ -99,7 +99,7 @@
   left: 0px;
   height: 100%;
   width: 100%;
-  /* z-index: 1; */
+  z-index: 1;
   pointer-events: none;
 
 }
@@ -112,6 +112,7 @@
   height: 70%;
   display: flex;
   flex-direction: column;
+  /* z-index: 2; */
   overflow: hidden;
 }
 
@@ -132,7 +133,7 @@
 }
 
 .module_description_rule {
-  margin: 0 -50px;
+  margin: 0 -50px -1px -50px;
 }
 
 .module_info_upper ul {

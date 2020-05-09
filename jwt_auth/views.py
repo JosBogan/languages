@@ -81,7 +81,7 @@ class NewProgressModule(APIView):
 
     def post(self, request, pk):
         if pk in [x.module_id.id for x in request.user.progression.module_progress.all()]:
-            return Response({'message': 'Modeule progress already exists'}, status=HTTP_422_UNPROCESSABLE_ENTITY)
+            return Response({'message': 'Module progress already exists'}, status=HTTP_422_UNPROCESSABLE_ENTITY)
         module_progress = {}
         module = Module.objects.get(pk=pk)
         module_progress['user_progress_id'] = request.user.progression.id

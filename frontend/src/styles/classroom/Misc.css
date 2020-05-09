@@ -52,7 +52,7 @@
   padding: 5px 10px;
   border: 2px solid rgb(216, 216, 216);
   width: 100%;
-  /* height: 30px */
+  height: 50px
 }
 
 .answerbox:focus {
@@ -65,4 +65,26 @@
 .correct_answer {
   background-color: var(--green);
   color: white;
+  transform-origin: left center;
+  border: 2px solid var(--green);
+  animation: correct_answer 0.5s;
+  transform-origin: center;
+}
+
+@keyframes correct_answer {
+  0% { 
+    /* height: 50px; 
+    width: 100%; */
+    transform: rotate(0deg);
+  }
+  30% { 
+    /* height: 60px; 
+    width: 110%; */
+    transform: rotate(2deg);
+  }
+  100% {
+    /* height: 50px; 
+    width: 100%; */
+    transform: rotate(0deg);
+  }
 }

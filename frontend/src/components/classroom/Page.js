@@ -83,6 +83,8 @@ class Page extends React.Component {
                   pathURL={`${this.props.match.url}/`} 
                   collapsed={this.props.collapsed}
                   totalPages={this.state.chunk.pages.length}
+                  chunkId={this.state.chunk.id}
+                  updateProgress={this.props.updateProgress}
                 />
               )}
             />

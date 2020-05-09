@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMinusSquare } from '@fortawesome/free-solid-svg-icons'
 
@@ -54,6 +55,7 @@ class Classroom extends React.Component {
   // }
 
   async componentDidMount() {
+    // this.getUser()
     const data_name = this.props.match.params.module_name.toLowerCase()
     try {
       const res = await axios.get(`/api/modules/${data_name}`)
@@ -82,14 +84,12 @@ class Classroom extends React.Component {
   }
 
   render() {
+    if (!this.state.user) return null
     if (!this.state.module) return null
-    // if (!this.state.user) return null
-    // if (
-    //   !this.props.location.fromProps && 
-    //   (
-    //   !this.state.user.completed_modules.includes(this.state.module.id) ||
-    //   !this.state.user.current_modules.includes(this.state.module.id))
-    //   ) return <Redirect to="/"/>
+    if (
+      !this.props.location.fromProps && 
+      !this.state.user.progression.module_progress.find(module => this.state.module.id === module.module_id)
+      ) return <Redirect to={`/${this.props.match.params.subject_name}`}/>
     return (
       <main className="page_container">
         <div 

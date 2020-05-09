@@ -31,6 +31,7 @@ class VocabTest extends React.Component {
     const val = event.target.value
     const answer = !this.state.transDirection ? this.state.currentVocab.native : this.state.currentVocab.translation
     if (val.toLowerCase() === answer.toLowerCase()) {
+      this.props.updateProgress(this.props.chunkId) // LINE FOR PROGRESSION TESTING, TAKE OUT
       setTimeout(this.newLetter, 1000)
       this.setState({ correct: true, disabled: true, input: val })
     } else {

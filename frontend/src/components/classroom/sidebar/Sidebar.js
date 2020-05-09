@@ -17,6 +17,13 @@ class Sidebar extends React.Component {
     chapterProgress: []
   }
 
+  componentDidMount() {
+    const module = JSON.parse(JSON.stringify(this.props.module))
+    module.chapters.sort((a, b) => a.order - b.order)
+    this.setState({ module })
+    this.settingProgress()
+  }
+
   componentDidUpdate(prevProps, prevState, snapshop) {
     const module = JSON.parse(JSON.stringify(this.props.module))
     module.chapters.sort((a, b) => a.order - b.order)
@@ -28,7 +35,9 @@ class Sidebar extends React.Component {
 
   settingProgress = () => {
     const chapterProgress = this.props.userInfo ? this.props.userInfo.progression.module_progress
-      .find(module => module.module_id === this.props.module.id).chapter_progress.filter(chapter => chapter.completed === true) :
+      .find(module => module.module_id === this.props.module.id).chapter_progress
+      .filter(chapter => chapter.completed === true)
+      .map(chapter => chapter.chapter_id) :
       []
     const chunkProgress = this.props.userInfo ? this.props.userInfo.progression.module_progress
       .find(module => module.module_id === this.props.module.id).chapter_progress
@@ -44,7 +53,7 @@ class Sidebar extends React.Component {
   // }
 
   render() {
-    if (!this.state.module) return null
+    // if (!this.state.module) return null
     return (
       <div 
         className="sidebar_wrapper"
@@ -61,7 +70,7 @@ class Sidebar extends React.Component {
             </ul>
           </div>
           <div className="all_module_container">
-            {this.state.module.chapters.map(chapter => (
+            {this.state.module && this.state.module.chapters.map(chapter => (
               <Module 
                 key={chapter.data_name}
                 // onModuleClick={this.onModuleClick}

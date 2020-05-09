@@ -41,13 +41,17 @@ class HubContainer extends React.Component {
     }
   }
 
+  removeUser = () => {
+    this.setState({ user: null })
+  }
+
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar removeUser={this.removeUser}/>
         <div className="main_offset">
         <Switch>
-            <SecureRoute path="/dashboard" component={UserPage}/>
+            <SecureRoute path="/dashboard" component={UserPage} user={this.state.user}/>
             {/* <Route path="/login" render={(props) => <UnSecureRoute path="/login" {...props} component={Login} getUser={this.getUser}/>}/> */}
             <UnSecureRoute path="/login" component={Login}/>
             <UnSecureRoute path="/register" component={Register}/> 
