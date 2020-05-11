@@ -15,7 +15,7 @@ from rest_framework.permissions import IsAuthenticated
 
 import jwt
 
-from .serializers import UserSerializer, UserProgressSerializer, ModuleProgressSerializer, ModuleNonPopProgressSerializer, ChapterNonPopProgressSerializer, ChunkNonPopProgressSerializer, UserPopulatedSerializer
+from .serializers import UserSerializer, UserProgressSerializer, ModuleProgressSerializer, ModuleNonPopProgressSerializer, ChapterNonPopProgressSerializer, ChunkNonPopProgressSerializer, UserPopulatedSerializer, UserProgressWithDataPopulatedSerializer
 
 # from chunks.models import Chunk
 # from chapters.models import Chapter
@@ -148,6 +148,17 @@ class ChunkCompleted(APIView):
         serialized_user = UserPopulatedSerializer(user)
         return Response(serialized_user.data)
 
+class PopulatedUserProgression(APIView):
+
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        try:
+            user_progress = UserProgress.objects.get(pk=request.user.progression.id)
+            serialized_progress = UserProgressWithDataPopulatedSerializer(user_progress)
+            return Response(serialized_progress.data)
+        except UserProgress.DoesNotExist:
+            raise PermissionDenied({'message': 'Invalid Credentials'})
 
 
 # class UserAddModuleView(APIView):

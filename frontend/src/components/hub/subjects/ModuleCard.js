@@ -21,7 +21,8 @@ function ModuleCard(props) {
           <h2>{props.module.name}</h2>
           <p className="module_card_subject">{props.subject[0].toUpperCase() + props.subject.slice(1)}</p>
         </div>
-        <div className="module_card_progress_containter">
+        {console.log(typeof props.progression)}
+        {typeof props.progression === 'number' && <div className="module_card_progress_containter">
           <div className="progress_bar_container">
             <div 
               className="progress_bar"
@@ -30,7 +31,7 @@ function ModuleCard(props) {
               }}
             ></div>
           </div>
-        </div>
+        </div>}
       </div>
     // </Link>
   )

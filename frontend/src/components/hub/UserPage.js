@@ -1,14 +1,32 @@
 import React from 'react'
 
-class UserPage extends React.Component {
+import axios from 'axios'
 
-  componentDidMount() {
+import Auth from '../../lib/auth'
+
+class UserPage extends React.Component {
+  
+  state = {
+    userProgress: null
+  }
+
+  async componentDidMount() {
     console.log(this.props)
+    try {
+      const res = await axios.get('/api/auth/user/progress', {
+        headers: {
+          Authorization: `Bearer ${Auth.getToken()}`
+        }
+      })
+      this.setState({ userProgress: res.data })
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   render() {
     if (!this.props.user) return null
-    console.log(this.props.user)
+    if (!this.state.userProgress) return null
     const user = this.props.user
     return (
       <section className="user_dashboard_container">
@@ -39,8 +57,12 @@ class UserPage extends React.Component {
             <p className="user_dashboard_card_profile_date">Joined: {user.date_joined.slice(0, 10).replace(/-/g, '/')}</p>
           </div>
         </div>
-        <div className="user_dashboard_card"></div>
-        <div className="user_dashboard_card grid_item_extra_wide"></div>
+        <div className="user_dashboard_card">
+          <h2 className="user_dashboard_card_header">Stats</h2>
+          <p>Modules in Progress: {user.progression.module_progress.length}</p>
+          <p>Modules Completed: {user.progression.module_progress.filter(module => module.completed === true).length}</p>
+        </div>
+        {/* <div className="user_dashboard_card grid_item_extra_wide"></div> */}
         <div className="user_dashboard_card grid_item_wide"></div>
         <div className="user_dashboard_card"></div>
         <div className="user_dashboard_card"></div>

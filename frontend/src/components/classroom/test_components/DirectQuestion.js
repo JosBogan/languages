@@ -1,5 +1,5 @@
 import React from 'react'
-import AnswerBox from './common/Answerbox'
+import AnswerBox from '../common/Answerbox'
 
 class DirectQuestion extends React.Component {
 

@@ -80,7 +80,7 @@ class SubjectModules extends React.Component {
                   this.props.progression && 
                   !!this.props.progression.find(x => x.module_id === module.id) ?
                   this.props.progression.find(x => x.module_id === module.id).progress : 
-                  0
+                  false
                 }
                 subject={this.state.subject}
                 toggleModal={this.toggleModal}

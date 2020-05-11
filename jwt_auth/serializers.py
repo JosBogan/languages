@@ -8,6 +8,9 @@ User = get_user_model()
 from .models import UserProgress, ModuleProgress, ChapterProgress, ChunkProgress
 from chapters.models import Chapter
 from chunks.models import Chunk
+from modules.models import Module
+
+# Non populated Serializers for saving progression
 
 class ChunkNonPopProgressSerializer(serializers.ModelSerializer):
 
@@ -26,6 +29,8 @@ class ModuleNonPopProgressSerializer(serializers.ModelSerializer):
     class Meta:
         model = ModuleProgress
         fields = '__all__'
+
+#  Populated Serializers for getting
 
 class ChunkProgressSerializer(serializers.ModelSerializer):
 
@@ -49,6 +54,8 @@ class ModuleProgressSerializer(serializers.ModelSerializer):
         model = ModuleProgress
         fields = '__all__'
 
+# User Serializer with progression populated for 'get'
+
 class UserProgressPopulatedSerializer(serializers.ModelSerializer):
 
     module_progress = ModuleProgressSerializer(many=True)
@@ -57,11 +64,15 @@ class UserProgressPopulatedSerializer(serializers.ModelSerializer):
         model = UserProgress
         fields = '__all__'
 
+# User Serializer without progress populated
+
 class UserProgressSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProgress
         fields = '__all__'
+
+# Main user Get serializer
 
 class UserPopulatedSerializer(serializers.ModelSerializer):
 
@@ -72,6 +83,8 @@ class UserPopulatedSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+
+# User Register Serializer
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -101,16 +114,56 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-# class ChunkSerializer(serializers.ModelSerializer):
+#  Serializers for User page, Progress with module/Chapter/Chunk Id populated
 
-#     class Meta:
-#         model = Chunk
-#         fields = '__all__'
+class ModuleSerializer(serializers.ModelSerializer):
 
-# class ChapterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Module
+        fields = ('name', 'subject')
 
-#     chunks = ChunkSerializer(many=True)
+class ChapterSerializer(serializers.ModelSerializer):
 
-#     class Meta:
-#         model = Chapter
-#         fields = '__all__'
+    class Meta:
+        model = Chapter
+        fields = ('name', )
+
+class ChunkSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Chunk
+        fields = ('name', )
+
+class ChunkProgressWithChunkSerializer(serializers.ModelSerializer):
+
+    chunk_id = ChunkSerializer()
+
+    class Meta:
+        model = ChunkProgress
+        fields = '__all__'
+
+class ChapterProgressWithChapterSerializer(serializers.ModelSerializer):
+
+    chapter_id = ChapterSerializer()
+    chunk_progress = ChunkProgressWithChunkSerializer(many=True)
+
+    class Meta:
+        model = ChapterProgress
+        fields = '__all__'
+
+class ModuleProgressWithModuleSerializer(serializers.ModelSerializer):
+
+    module_id = ModuleSerializer()
+    chapter_progress = ChapterProgressWithChapterSerializer(many=True)
+
+    class Meta:
+        model = ModuleProgress
+        fields = '__all__'
+
+class UserProgressWithDataPopulatedSerializer(serializers.ModelSerializer):
+
+    module_progress = ModuleProgressWithModuleSerializer(many=True)
+
+    class Meta:
+        model = UserProgress
+        fields = '__all__'

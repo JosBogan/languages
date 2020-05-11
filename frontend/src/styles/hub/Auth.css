@@ -1,9 +1,74 @@
 .auth_container {
   width: 500px;
   margin: 150px auto;
-  /* background-color: var(--primary); */
+  background-color: whitesmoke;
   border: 1px solid #dfdfdf;
   border-radius: 10px;
   padding: 20px 30px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 10px 10px -5px;
+}
+
+.auth_header {
+  margin-top: 20px;
+}
+
+.auth_input_container {
+  margin: 20px 0;
+}
+
+.auth_input {
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+  border: 0px;
+  border-bottom: 2px solid #dfdfdf;
+  background: none;
+  width: 100%;
+}
+
+.auth_input_label {
+  display: inline-block;
+  transform: translate(0, 33px);
+  color: #666666;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.auth_input:focus {
+  border-bottom: 2px solid var(--blue);
+}
+
+.auth_input_focus {
+  transform: translate(0, 0)
+}
+
+.auth_submit_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.auth_submit_button {
+  /* width: 50%; */
+  justify-self: flex-start;
+  font-size: 1.2em;
+  padding: 10px 70px;
+  border: 0px;
+  flex: 0;
+  background-color: var(--green);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.1s;
+}
+
+.auth_submit_button:hover {
+  background-color: rgb(29, 167, 77);
+}
+
+.login_link {
+  /* float: right; */
+  /* flex: 1; */
+  justify-self: flex-end;
 }

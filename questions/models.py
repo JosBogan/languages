@@ -7,10 +7,12 @@ class Question(models.Model):
     QUESTION_TYPE_CHOICES = [
         ('direct', 'Direct'),
         ('table_fill', 'Table Fill'),
+        ('multiple_choice', 'Multiple Choice')
     ]
     INSTRUCTION_OPTIONS = [
         ('translate', 'Translate the following'),
         ('conjugate', 'Conjugate the followiing'),
+        ('fill', 'Fill in the blanks')
     ]
 
     instruction_type = models.CharField(max_length=50, choices=INSTRUCTION_OPTIONS, blank=True)

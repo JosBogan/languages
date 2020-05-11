@@ -71,12 +71,14 @@
   column-gap: 5%;
   row-gap: 70px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 300px 50px 200px 200px;
+  /* grid-template-rows: 300px 50px 200px 200px; */
+  grid-template-rows: 300px 200px 200px;
 }
 
 .user_dashboard_card {
   background-color: whitesmoke;
   border-radius: 10px;
+  overflow: hidden;
   border: 1px solid rgb(206, 206, 206);
   box-shadow: rgba(0, 0, 0, 0.05) 0 10px 10px -5px;
 }
@@ -104,5 +106,12 @@
 
 .grid_item_wide {
   grid-column: 1/3;
-  grid-row: 3/5;
+  /* grid-row: 3/5; */
+  grid-row: 2/4;
+}
+
+.user_dashboard_card_header {
+  padding: 10px;
+  background-color: var(--secondary);
+  color: white;
 }

@@ -1,0 +1,61 @@
+.drag_n_drop_container {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.drag_n_drop_template {
+  margin-bottom: 40px;
+}
+
+.drag_n_drop_empty_segment {
+  min-width: 100px;
+  display: inline-block;
+  border-bottom: 2px solid var(--blue);
+  margin: 0 2px;
+}
+
+.drag_n_drop_filled_segment {
+  border-bottom: 2px solid var(--green);
+}
+
+/* .drag_n_drop_segment {
+  height: 1.5em;
+} */
+
+.drag_n_drop_options {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80px;
+}
+
+.drag_n_drop_option_card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 10px 10px -5px;
+}
+
+.drag_n_drop_option_card:hover {
+  background: #cc5d41;
+  transform: scale(1.05)
+}
+
+.drag_n_drop_option_card_disabled {
+  background-color: #aaaaaa;
+  cursor: default;
+  pointer-events: none;
+}
+
+.drag_n_drop_correct_segment {
+  border-bottom: 2px solid var(--green);
+  margin: 0px;
+}
