@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faSearch, faBell, faBook, faChalkboardTeacher, faChalkboard } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faSearch, faBell, faBook, faChalkboard } from '@fortawesome/free-solid-svg-icons'
 
 import Auth from '../../lib/auth'
 

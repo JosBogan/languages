@@ -31,6 +31,7 @@ class Alphabet extends React.Component {
 
   handleRowSelect = (event) => {
     event.stopPropagation()
+    console.log(event.target)
     if (!(event.target.getAttribute('name') in this.state.rowsSelected)) {
       const row = this.state.alphabet[parseInt(event.target.getAttribute('name')) - 1]
       const rowsSelected = JSON.parse(JSON.stringify(this.state.rowsSelected))

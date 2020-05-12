@@ -1,5 +1,4 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 
 import axios from 'axios'
 // import Module from '../classroom/sidebar/Module'
@@ -40,7 +39,6 @@ class SubjectModules extends React.Component {
   directLink = (module) => {
     console.log('redirect')
     this.props.history.push(`/cr/${this.state.subject}/${module.data_name}`)
-    // return <Redirect to={`/cr/${this.state.subject}/${module.data_name}`}/>
   } 
 
   addModuleUser = async () => {

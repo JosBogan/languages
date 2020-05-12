@@ -27,18 +27,22 @@
 .drag_n_drop_options {
   display: flex;
   justify-content: space-evenly;
-  height: 80px;
+  /* height: 80px; */
+  flex-wrap: wrap;
 }
 
 .drag_n_drop_option_card {
   flex: 1;
+
+  min-width: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--primary);
   color: white;
   border-radius: 10px;
-  margin: 0 20px;
+  margin: 0 20px 20px 20px;
   cursor: pointer;
   transition: all 0.1s;
   box-shadow: rgba(0, 0, 0, 0.2) 0 10px 10px -5px;

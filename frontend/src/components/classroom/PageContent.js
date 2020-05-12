@@ -37,13 +37,10 @@ class PageContent extends React.Component {
   render(){
     const { page } = this.props 
     return (
-      <div>
+        <div className="content_inner_flex_container">
         {page.page_no !== 1 && 
           <Back collapsed={this.props.collapsed} path={`${this.props.pathURL}${page.page_no - 1}`}/>
         }
-        {/* {page.title}
-        {page.content} */}
-        <div className="content_inner">
           {page.title && <h1>{page.title}</h1>}
           <Markdown
             options={{
@@ -67,12 +64,11 @@ class PageContent extends React.Component {
           >
             {this.textConversion(this.state.text)}
             </Markdown>
-        </div>
         {page.page_no !== this.props.totalPages ?
           <Next path={`${this.props.pathURL}${page.page_no + 1}`}/> :
           <Next path={`${this.props.pathURL}test`}/>
         }
-      </div>
+        </div>
     )
   }
 }

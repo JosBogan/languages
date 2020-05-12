@@ -35,10 +35,10 @@ class TestContent extends React.Component {
   render() {
     if (!this.state.questions) return null
     return (
-      <div>
+      <div className="content_inner_flex_container">
         <Back collapsed={this.props.collapsed} path={`${this.props.pathURL}${this.props.totalPages}`}/>
-        <div className="content_inner">
         <h1>Test</h1>
+        <div className="content_inner_containter">
         {Object.keys(this.state.questions).map(questionType => (
           <div className="question_type_container" key={questionType}>
           {/* <h2 className="question_type_header">{questionType[0].toUpperCase() + questionType.slice(1)}</h2> */}
@@ -62,14 +62,7 @@ class TestContent extends React.Component {
           })}
           </div>
         ))}
-        {/* <DragNDrop 
-          question={this.state.testQuestion}
-          updateCorrect={this.state.updateCorrect}
-        /> */}
         </div>
-        {/* {this.state.score >= this.state.questions.translate.length &&
-          <Next path={`${this.props.pathURL}/1/`}/> // CHANGE PATH
-        } */}
       </div>
     )
   }

@@ -10,7 +10,7 @@ class DirectQuestion extends React.Component {
 
   onChange = (event) => {
     const val = event.target.value
-    if (val === this.props.question.answer) {
+    if (val.toLowerCase() === this.props.question.answer.toLowerCase()) {
       // const score = this.state.score + 1
       this.props.updateCorrect()
       this.setState({ correct: true, disabled: true })

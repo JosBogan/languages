@@ -16,4 +16,4 @@ class Chunk(models.Model):
     chapter = models.ForeignKey('chapters.Chapter', on_delete=models.CASCADE, related_name='chunks')
 
     def __str__(self):
-        return f'{self.name}'
+        return f'{self.name} - {self.chapter} - {self.order}'

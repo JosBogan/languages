@@ -42,9 +42,9 @@ class Page extends React.Component {
   }
 
   render() {
-    if (!this.state.chunk) return null
+    if (!this.state.chunk) return <div className="content_inner"><h1 className="loading_header">Loading</h1></div>
     return (
-      <div>
+      <div className="content_inner">
         <Switch>
           {this.state.chunk.pages.map(page => (
             <Route 

@@ -20,11 +20,13 @@ class ModuleInfo extends React.Component {
   render() {
     if (!this.props.module.getting_started) return null
     return (
-      <div className="content_inner">
+      <div className="content_inner"> 
+      <div className="content_inner_flex_container">
         <h1>Getting Started</h1>
         <Markdown>
           {this.textConversion(this.props.module.getting_started)}
         </Markdown>
+      </div>
       </div>
     )
   }
