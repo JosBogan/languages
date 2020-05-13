@@ -51,8 +51,9 @@ class VocabTest extends React.Component {
     if (!this.state.vocab) return null
     return (
       <div className="content_inner">
+        <div className="content_inner_flex_container">
         <h1>Test</h1>
-        {/* <div className="vocab_wrapper"> */}
+        <div className="vocab_test_container">
         <p className="question_text vocab_question">{this.state.transDirection ? this.state.currentVocab.native : this.state.currentVocab.translation}</p>
         <AnswerBox 
           onChange={this.onChange}
@@ -60,8 +61,9 @@ class VocabTest extends React.Component {
           disabled={this.state.disabled}
           input={this.state.input}
         />
-        {/* </div> */}
+        </div>
         <Back collapsed={this.props.collapsed} path={`${this.props.pathURL}vocab`}/>
+        </div>
       </div>
     )
   }

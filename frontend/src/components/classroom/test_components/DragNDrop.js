@@ -10,8 +10,8 @@ class DragNDrop extends React.Component {
 
   componentDidMount() {
     const question = JSON.parse(JSON.stringify(this.props.question))
-    question.specificInstruction = JSON.parse(question.specificInstruction)
-    const input = JSON.parse(JSON.stringify(question.specificInstruction))
+    question.extra = JSON.parse(question.extra)
+    const input = JSON.parse(JSON.stringify(question.extra))
     question.question = JSON.parse(question.question)
     this.setState({ question, input })
   }
@@ -48,6 +48,7 @@ class DragNDrop extends React.Component {
     return (
       <div className="question_container">
         <div className="drag_n_drop_container">
+          {/* <h4>{this.state.question.specific_instruction}</h4> */}
           <div className="drag_n_drop_template">
           {this.state.input.map((segment, index) => (
             <span 

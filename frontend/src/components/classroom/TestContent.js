@@ -41,8 +41,11 @@ class TestContent extends React.Component {
         <div className="content_inner_containter">
         {Object.keys(this.state.questions).map(questionType => (
           <div className="question_type_container" key={questionType}>
-          {/* <h2 className="question_type_header">{questionType[0].toUpperCase() + questionType.slice(1)}</h2> */}
-          {this.state.questions[questionType].map(question => {
+          <h2 className="question_type_header">
+            {questionType === 'direct' && 'Translate'}
+            {questionType === 'multiple_choice' && 'Build the Sentence'}
+          </h2>
+          {this.state.questions[questionType].sort((a, b) => a.order - b.order).map(question => {
             if (questionType === 'direct') {
             return (
             <DirectQuestion 

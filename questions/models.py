@@ -16,9 +16,11 @@ class Question(models.Model):
     ]
 
     instruction_type = models.CharField(max_length=50, choices=INSTRUCTION_OPTIONS, blank=True)
-    specificInstruction = models.CharField(max_length=200, blank=True)
+    specific_instruction = models.CharField(max_length=200, blank=True)
+    extra = models.CharField(max_length=200, blank=True)
     question = models.CharField(max_length=200)
     question_type = models.CharField(max_length=50, choices=QUESTION_TYPE_CHOICES)
+    order = models.IntegerField(blank=True)
     answer = models.CharField(max_length=200)
     chunk = models.ForeignKey('chunks.Chunk', on_delete=models.CASCADE, related_name='questions')
 

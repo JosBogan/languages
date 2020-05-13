@@ -47,6 +47,10 @@
   color: transparent;
 }
 
+.vocab_test_container {
+  padding: 30px 200px 50px 200px;
+}
+
 /* Tests */
 
 .question_type_header {

@@ -54,12 +54,12 @@ class Navbar extends React.Component {
       >
         <Link to="/" className="navbar_item"><div>Logo</div></Link>
         <div className="navbar_auth_link_container">
-          {Auth.isAuthenticated() && 
+          {/* {Auth.isAuthenticated() && 
             <button aria-label="Search" 
             className={`navbar_button navbar_item navbar_auth_link`}><FontAwesomeIcon icon={faSearch}/></button>}
           {Auth.isAuthenticated() && 
             <button aria-label="Notifications" 
-            className={`navbar_button navbar_item navbar_auth_link`}><FontAwesomeIcon icon={faBell}/></button>}
+            className={`navbar_button navbar_item navbar_auth_link`}><FontAwesomeIcon icon={faBell}/></button>} */}
           {Auth.isAuthenticated() && 
             <Link title="User Dashboard" to="/dashboard" 
             className={`navbar_item navbar_auth_link ${this.state.selected === '/dashboard' && 'nav_auth_link_selected'}`}><FontAwesomeIcon icon={faUser}/></Link>}

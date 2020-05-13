@@ -9,6 +9,7 @@ from .models import UserProgress, ModuleProgress, ChapterProgress, ChunkProgress
 from chapters.models import Chapter
 from chunks.models import Chunk
 from modules.models import Module
+from subjects.models import Subject
 
 # Non populated Serializers for saving progression
 
@@ -116,11 +117,19 @@ class UserSerializer(serializers.ModelSerializer):
 
 #  Serializers for User page, Progress with module/Chapter/Chunk Id populated
 
+class SubjectSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Subject
+        fields = ('name', 'id')
+
 class ModuleSerializer(serializers.ModelSerializer):
+
+    subject = SubjectSerializer()
 
     class Meta:
         model = Module
-        fields = ('name', 'subject')
+        fields = ('name', 'subject', 'data_name')
 
 class ChapterSerializer(serializers.ModelSerializer):
 
