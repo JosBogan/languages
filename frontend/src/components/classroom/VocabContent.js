@@ -25,7 +25,7 @@ class VocabContent extends React.Component {
     return (
       <div className="content_inner_flex_container">
         <h1>Vocab</h1>
-        <div className="content_inner_containter">
+        <div className="content_inner_container">
           <table className="vocab_table">
             {/* <tbody> */}
           {Object.keys(this.state.vocab).map(vocabType => (

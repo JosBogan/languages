@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faCog } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faCog, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 import Module from './Module'
@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
             <ul className="sidebar_nav">
               <Link to="/"><li><FontAwesomeIcon icon={faHome}/></li></Link>
               <Link to="/dashboard"><li><FontAwesomeIcon icon={faUser}/></li></Link>
-              <Link to={`/cr/${this.props.match.params.subject_name}/${this.props.match.params.module_name}`}><li><FontAwesomeIcon icon={faCog}/></li></Link>
+              <Link to={`/cr/${this.props.match.params.subject_name}/${this.props.match.params.module_name}`}><li><FontAwesomeIcon icon={faInfoCircle}/></li></Link>
             </ul>
           </div>
           <div className="all_module_container">

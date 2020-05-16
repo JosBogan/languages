@@ -25,14 +25,14 @@
   border-bottom: 2px solid var(--primary);
 }
 
-.content_inner_containter {
+.content_inner_container {
   padding: 30px 200px 50px 200px;
   display: flex;
   flex-direction: column;
   overflow: scroll;
 }
 
-.content_inner_containter > p, .content_inner_containter > div {
+.content_inner_container > p, .content_inner_container > div {
   margin: 20px 0;
   text-align: justify;
 }
@@ -59,7 +59,7 @@
 
 .question_container {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .question_text {
@@ -76,4 +76,10 @@
   font-size: 26px;
   margin-top: 170px;
   margin-bottom: 40px;
+}
+
+/* Direct Table */ 
+
+.normal_table {
+  /* display: table; */
 }

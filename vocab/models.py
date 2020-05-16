@@ -11,4 +11,4 @@ class Vocab(models.Model):
     vocab_type = models.CharField(max_length=50)
 
     def __str__(self):
-        return f'{self.native} - {self.translation} - {self.otherTranslation}'
+        return f'{self.native} - {self.translation} - {self.otherTranslation} - {self.chunk}'

@@ -23,6 +23,8 @@ class Classroom extends React.Component {
   }
 
   updateProgress = async (chunkId) => {
+    console.log(this.state.user)
+    console.log(chunkId)
     const alreadyCompleted = this.state.user.progression.module_progress
         .find(module => module.module_id === this.state.module.id).chapter_progress
           .map(chapter => chapter.chunk_progress).flat()

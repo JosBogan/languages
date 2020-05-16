@@ -38,12 +38,12 @@ class TestContent extends React.Component {
       <div className="content_inner_flex_container">
         <Back collapsed={this.props.collapsed} path={`${this.props.pathURL}${this.props.totalPages}`}/>
         <h1>Test</h1>
-        <div className="content_inner_containter">
+        <div className="content_inner_container">
         {Object.keys(this.state.questions).map(questionType => (
           <div className="question_type_container" key={questionType}>
           <h2 className="question_type_header">
             {questionType === 'direct' && 'Translate'}
-            {questionType === 'multiple_choice' && 'Build the Sentence'}
+            {questionType === 'multiple_choice' && 'Build a Sentence'}
           </h2>
           {this.state.questions[questionType].sort((a, b) => a.order - b.order).map(question => {
             if (questionType === 'direct') {
