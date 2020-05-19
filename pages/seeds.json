@@ -5,7 +5,7 @@
   "fields": {
     "data_name": "jp_1_1_1_1",
     "title": "Declarations",
-    "content": "The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following structure:\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_ \u306f \\_\\_\\_\\_\\_\\_ \u3067\u3059</p><TextComparison highlighted={\u306f|\u3067\u3059} text={[[\"I am a teacher\", \"\u308f\u305f\u3057\u306f\u305b\u3093\u305b\u3044\u3067\u3059\"], [\"Takeshi is a student\", \"\u305f\u3051\u3057\u306f\u304c\u304f\u305b\u3044\u3067\u3059\"], [\"The teacher is english\", \"\u305b\u3093\u305b\u3044\u306f\u30a4\u30ae\u30ea\u30b9\u3058\u3093\u3067\u3059\"]]}/> The **topic particle** <span class=\"blue_text\">** \u306f**</span> indicates the topic of the sentence that comes just before. <span class=\"blue_text\">**\u3067\u3059**</span> is a copula verb that means **\"to be\"** or **\"is\"**.\u21b5\u21b5<sup>Note: whilst **\u306f** is ordinarily pronounced **ha**, when used as a particle it is pronounced **wa**</sup>",
+    "content": "<div class=\"content_inner_container\">The most basic form of a sentence in Japanese is to simply declare that **Something is another thing**. These sentences are formed with the following structure:\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_ \u306f \\_\\_\\_\\_\\_\\_ \u3067\u3059</p><TextComparison highlighted={\u306f|\u3067\u3059} text={[[\"I am a teacher\", \"\u308f\u305f\u3057\u306f\u305b\u3093\u305b\u3044\u3067\u3059\"], [\"Takeshi is a student\", \"\u305f\u3051\u3057\u306f\u304c\u304f\u305b\u3044\u3067\u3059\"], [\"The teacher is english\", \"\u305b\u3093\u305b\u3044\u306f\u30a4\u30ae\u30ea\u30b9\u3058\u3093\u3067\u3059\"]]}/> The **topic particle** <span class=\"blue_text\">** \u306f**</span> indicates the topic of the sentence that comes just before. <span class=\"blue_text\">**\u3067\u3059**</span> is a copula verb that means **\"to be\"** or **\"is\"**.\u21b5\u21b5<sup>Note: whilst **\u306f** is ordinarily pronounced **ha**, when used as a particle it is pronounced **wa**</sup></div>",
     "chunk": 1,
     "page_no": 1
   }
@@ -16,7 +16,7 @@
   "fields": {
     "data_name": "jp_1_1_1_2",
     "title": "Omission and Context",
-    "content": "In Japanese, **omission** and **context** are both very important. Often in Japanese, people will omit the subject of a sentence so the context of the conversation will imply meaning.\u21b5\u21b5<TextComparison text={[[\"(I am) Japanese\", \"\u306b\u307b\u3093\u3058\u3093\u3067\u3059\"], [\"(I am a) lawyer\", \"\u3079\u3093\u3054\u3057\u3067\u3059\"], [\"(It is) sushi\", \"\u3059\u3057\u3067\u3059\"]]}/>Japanese **does not** have the **definite or indefinite articles** seen in english; a, an, the. Nor does japanese indicate plurality at the end of nouns like in english; tables, cars, etc. Like before, the context of the conversation and other aspects of the grammar indicate these things",
+    "content": "<div class=\"content_inner_container\">In Japanese, **omission** and **context** are both very important. Often in Japanese, people will omit the subject of a sentence so the context of the conversation will imply meaning.\u21b5\u21b5<TextComparison text={[[\"(I am) Japanese\", \"\u306b\u307b\u3093\u3058\u3093\u3067\u3059\"], [\"(I am a) lawyer\", \"\u3079\u3093\u3054\u3057\u3067\u3059\"], [\"(It is) sushi\", \"\u3059\u3057\u3067\u3059\"]]}/>Japanese **does not** have the **definite or indefinite articles** seen in english; a, an, the. Nor does japanese indicate plurality at the end of nouns like in english; tables, cars, etc. Like before, the context of the conversation and other aspects of the grammar indicate these things.\u21b5\u21b5One of the most common places to find omission is with the pronoun **you** / <span class=\"blue_text\">** \u3042\u306a\u305f**</span>. Using <span class=\"blue_text\">**\u3042\u306a\u305f**</span> is often seen as rude so it is most often left out of speech and up to context</div>",
     "chunk": 1,
     "page_no": 2
   }
@@ -27,7 +27,7 @@
   "fields": {
     "data_name": "jp_1_1_2_1",
     "title": "Questions",
-    "content": "In Japanese, a question is indicated by the particle <span class=\"blue_text\">**\u304b**</span> at the end of a sentence. This means that in order to turn a statement into a question, you simply have to add <span class=\"blue_text\">**\u304b**</span> to the end.\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_ \u304b</p>\u21b5\u21b5<TextComparison highlighted={\u304b} text={[[\"\u308a\u3093\u3054\u3067\u3059\", \"\u308a\u3093\u3054\u3067\u3059\u304b\"], [\"It is an apple\", \"Is it an apple?\"]]}/>\u21b5\u21b5<TextComparison highlighted={\u304b} text={[[\"\u304c\u304f\u305b\u3044\u3067\u3059\", \"\u304c\u304f\u305b\u3044\u3067\u3059\u304b\"], [\"I am a student\", \"Are you a student?\"]]}/>\u21b5\u21b5As we learnt previously, the context of the conversation can change the meaning, so in the final example, the subject of the sentence changed do to the implication that the speaker wouldn\\'t be asking their own age",
+    "content": "<div class=\"content_inner_container\">In Japanese, a question is indicated by the particle <span class=\"blue_text\">**\u304b**</span> at the end of a sentence. This means that in order to turn a statement into a question, you simply have to add <span class=\"blue_text\">**\u304b**</span> to the end.\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_ \u304b</p>\u21b5\u21b5<TextComparison highlighted={\u304b} text={[[\"\u308a\u3093\u3054\u3067\u3059\", \"It is an apple\"], [\"\u308a\u3093\u3054\u3067\u3059\u304b\", \"Is it an apple?\"]]}/>\u21b5\u21b5<TextComparison highlighted={\u304b} text={[[\"\u304c\u304f\u305b\u3044\u3067\u3059\", \"I am a student\"], [\"\u304c\u304f\u305b\u3044\u3067\u3059\u304b\", \"Are you a student?\"]]}/>\u21b5\u21b5As we learnt previously, the context of the conversation can change the meaning, so in the final example, the subject of the sentence changed do to the implication that the speaker wouldn\\'t be asking their own age</div>",
     "chunk": 2,
     "page_no": 1
   }
@@ -38,7 +38,7 @@
   "fields": {
     "data_name": "jp_1_1_1_1_1",
     "title": "Possession",
-    "content": "The concept of possession is indicated with the particle <span class=\"blue_text\">\u306e</span> when sandwiched between two **Nouns** as shown below:\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\u3000\u306e\u3000\\_\\_\\_\\_\\_\\_</p>\u21b5\u21b5<TextComparison highlighted={\u306e} text={[[\"The teacher\\'s book\", \"\u305b\u3093\u305b\u3044\u306e\u307b\u3093\u3067\u3059\"], [\"It\\'s Haruka\\'s umbrella\", \"\u306f\u308b\u304b\u306e\u304b\u3055\u3067\u3059\"], [\"My School\", \"\u308f\u305f\u3057\u306e\u304c\u3063\u3053\u3046\"]]}/>",
+    "content": "<div class=\"content_inner_container\">The concept of possession is indicated with the particle <span class=\"blue_text\">\u306e</span> when sandwiched between two **Nouns** as shown below:\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\u3000\u306e\u3000\\_\\_\\_\\_\\_\\_</p>\u21b5\u21b5<TextComparison highlighted={\u306e} text={[[\"The teacher's book\", \"\u305b\u3093\u305b\u3044\u306e\u307b\u3093\u3067\u3059\"], [\"It's Haruka's umbrella\", \"\u306f\u308b\u304b\u306e\u304b\u3055\u3067\u3059\"], [\"My School\", \"\u308f\u305f\u3057\u306e\u304c\u3063\u3053\u3046\"]]}/></div>",
     "chunk": 3,
     "page_no": 1
   }
@@ -49,7 +49,7 @@
   "fields": {
     "data_name": "jp_dsafd",
     "title": "More \u306e",
-    "content": "The particle <span class=\"blue_text\">\u306e</span> is extreemly versitile and can used to pair two nouns together to give second noun the property of, or further description expressed in the first noun. <span class=\"blue_text\">\u306e</span> can also describe the origin of something.\u21b5\u21b5<TextComparison highlighted={\u306e}\u3000text={[[\"Japanese friend\", \"\u306b\u307b\u3093\u306e\u3068\u3082\u3060\u3061\"]]}/>",
+    "content": "<div class=\"content_inner_container\">The particle <span class=\"blue_text\">\u306e</span> is extreemly versitile and can used to pair two nouns together to give second noun the property of, or further description expressed in the first noun. <span class=\"blue_text\">\u306e</span> can also describe the origin of something.\u21b5\u21b5<TextComparison highlighted={\u306e}\u3000text={[[\"Japanese friend\", \"\u306b\u307b\u3093\u306e\u3068\u3082\u3060\u3061\"]]}/></div>",
     "chunk": 3,
     "page_no": 2
   }
@@ -60,9 +60,130 @@
   "fields": {
     "data_name": "bdfsgfd",
     "title": "Sentence Structure",
-    "content": "As you may have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows a **Subject** - **Verb** - **Object**\u21b5\u21b5<p class=\"text_alone\">I am a student</p>\u21b5\u21b5Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.\u21b5\u21b5<SelectText text={[[\"\u308f\u305f\u3057\", \"\u306f\", \"\u304c\u304f\u305b\u3044\", \"\u3067\u3059\"], [\"Subject/Topic\", \"Particle\", \"Object\", \"Verb\"]]}/>Whilst this will take some time to get used to so don\\'t worry if it inially takes you some time to figure out what each sentence is saying!",
+    "content": "<div class=\"content_inner_container\">As you may have noticed in the past sections, the sentence structure in Japanese varies quite significantly from English. Whilst English typically follows the structure: **Subject** - **Verb** - **Object**.\u21b5\u21b5<p class=\"text_alone\">I am a student</p>\u21b5\u21b5Japanese typically uses a **Subject/Topic** - **Object** - **Verb** structure.\u21b5\u21b5<SelectText text={[[\"\u308f\u305f\u3057\", \"\u306f\", \"\u304c\u304f\u305b\u3044\", \"\u3067\u3059\"], [\"Subject/Topic\", \"Particle\", \"Object\", \"Verb\"]]}/>The particle <span class=\"blue_text\">**\u306f**</span> also indicates the **Subject** or **Topic** of the sentence by coming right after it.Whilst this will take some time to get used to so don\\'t worry if it initially takes you some time to figure out what each sentence is saying!</div>",
     "chunk": 13,
     "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 8,
+  "fields": {
+    "data_name": "counting_1",
+    "title": "Counting",
+    "content": "<div class=\"content_inner_container\">Today we will be learning numbers and counting in Japanese. The following are the numbers up to ten:\u21b5\u21b5| Number | Translation |\u21b5| --- | --- |\u21b5| 1 | \u3044\u3061 |\u21b5| 2 | \u306b |\u21b5| 3 | \u3055\u3093 |\u21b5| 4 | \u3088\u3093 OR \u3057 |\u21b5| 5 | \u3054 |\u21b5| 6 | \u308d\u304f |\u21b5| 7 | \u306a\u306a OR \u3057\u3061 |\u21b5| 8 | \u306f\u3061 |\u21b5| 9 | \u304d\u3085\u3046 |\u21b5| 10 | \u3058\u3085\u3046 |\u21b5| 100| \u3072\u3083\u304f |\u21b5| 1,000 | \u305b\u3093 |\u21b5| 10,000 | \u307e\u3093 |\u21b5\u21b5When Counting **above 10** Japanese follows a very logical structure using a composition of the numbers 1-10.\u21b5\u21b5Multiples of 10 (20, 30, 40 etc.) are expressed literally with a single digit number followed by the number **10**, <span class=\"blue_text\">**\u3058\u3085\u3046**</span>, so <span class=\"blue_text\">**\u306b\u3058\u3087\u3046**</span>, literally 2, 10, means 20. <span class=\"blue_text\">**\u308d\u304f\u3058\u3087\u3046**</span>, literally 6, 10, is 60 etc. This same rule also applies for **multiples of 100** , **multiples of 1,000** and **multiples of 10,000**. With that in mind, <span class=\"blue_text\">**\u306b\u3072\u3083\u304f\u308d\u304f\u3058\u3085\u3046\u306a\u306a**</span> is **267**\u21b5\u21b5<sup>Fun Fact: The reason that the Japanese language has two words for 4 and 7 are because they are considered unlucky numbers. This is due to the fact that the traditional pronunciation (<span class=\"blue_text\">**\u3057**</span>) is similar to their verb to die  <span class=\"blue_text\">**\u3057\u306c**</span> In a similar vein, many tall buildings in Japan will not have a floor four, they will simply go from 3 to 5</sup></div>",
+    "chunk": 18,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 9,
+  "fields": {
+    "data_name": "counting_2",
+    "title": "Thought that was too easy?",
+    "content": "<div class=\"content_inner_container\">Unfortunately, whilst counting is simple conceptually in Japanese, one important factor that often trips learners up is the pronunciation and spelling of the numbers as certain combinations of numbers cause the pronunciation to be modified. All of the notable changes are shown below.</div>",
+    "chunk": 18,
+    "page_no": 2
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 10,
+  "fields": {
+    "data_name": "this-that-and-the-other-thing",
+    "title": "This, That and the Other Thing",
+    "content": "<div class=\"content_inner_container\">When referring to things or object using pronouns instead of a name or noun, there are a number of different words one can use depending on the object\\'s position in relation to the speaker and specificity. The first syllable of the pronoun determines the **location of the object**:\u21b5\u21b5<TextComparison highlighted={\u305d|\u3053|\u3042} text={[[\"\u3053~\", \"This (Near the Speaker)\"], [\"\u305d~\", \"That (Away from the Speaker)\"], [\"\u3042~\", \"That (Far from the Speaker)\"]]}/> The second syllable of the pronoun determines whether the speaker is referring to a **specific object of a type** that will be specified after or not:\u21b5\u21b5<TextComparison highlighted={\u306e|\u308c} text={[[\"~\u308c\", \"(that/that) unspecified by noun\"], [\"~\u306e (followed by noun)\", \"(this/that) specified by noun\"]]}/> For example:\u21b5\u21b5<TextComparison highlighted={\u3042\u306e|\u3053\u308c}\u3000text={[[\"\u3053\u308c \u306f \u308f\u305f\u3057 \u306e \u307b\u3093\", \"This is my book\"], [\"\u3042\u306e \u307b\u3093 \u306f \u308f\u305f\u3057 \u306e \u3067\u3059\", \"That book is mine\"]]}/> **Remember, a pronoun ending in <span class=\"blue_text\">~\u306e</span> will always be followed by a noun immediately after!**</div>",
+    "chunk": 4,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 11,
+  "fields": {
+    "data_name": "also-as-well",
+    "title": "Also/As Well",
+    "content": "<div class=\"content_inner_container\">Content</div>",
+    "chunk": 5,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 13,
+  "fields": {
+    "data_name": "sentence-enders",
+    "title": "Sentence Enders",
+    "content": "<div class=\"content_inner_container\">Content</div>",
+    "chunk": 7,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 14,
+  "fields": {
+    "data_name": "this-that-and-the-other-thing-full-list",
+    "title": "Full List",
+    "content": "<div class=\"content_inner_container\">Here is a list of all combinations of pronoun created from the components seen previously: <TextComparison highlighted={\u3053\u308c|\u305d\u308c|\u3042\u308c} text={[[\"\u3053\u308c\", \"This (Near the Speaker)\"], [\"\u305d\u308c\", \"That (Away from the Speaker)\"], [\"\u3042\u308c\", \"That (Far from the Speaker)\"]]}/><TextComparison highlighted={\u305d\u306e|\u3053\u306e|\u3042\u306e} text={[[\"\u3053\u306e (Noun e.g \u304b\u3055)\", \"This (Near the Speaker) (Umblrella)\"], [\"\u305d\u306e (Noun e.g \u304b\u3055)\", \"That (Away from the Speaker) (Umbrella)\"], [\"\u3042\u306e (Noun e.g \u304b\u3055)\", \"That (Far from the Speaker) (Umbrella)\"]]}/></div>",
+    "chunk": 4,
+    "page_no": 2
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 15,
+  "fields": {
+    "data_name": "not",
+    "title": "Not!",
+    "content": "<div class=\"content_inner_container\">So far we have only been able to declare or ask whether something is something else. Today we are going to look at negatives, i,e saying that something **isn\\'t** another thing.\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\u3058\u3083\u3042\u308a\u307e\u305b\u3093</p><TextComparison highlighted={\u3058\u3083\u3042\u308a\u307e\u305b\u3093} text={[[\"\u305d\u308c\u306f\u308a\u3093\u3054\u3058\u3083\u3042\u308a\u307e\u305b\u3093\", \"That is not an apple\"]]}/>This is the negative tense of the copula verb <span class=\"blue_text\">**\u3067\u3059**</span>.\u21b5\u21b5As we will learn in more depth later, Japanese has many varying levels of formality. The more **casual** way to conjugate <span class=\"blue_text\">**\u3067\u3059**</span> into negative is: \u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\u3058\u3083\u306a\u3044</p><TextComparison highlighted={\u3058\u3083\u306a\u3044} text={[[\"\u305d\u308c\u306f\u308a\u3093\u3054\u3058\u3083\u306a\u3044\", \"That is not an apple\"]]}/></div>",
+    "chunk": 6,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 16,
+  "fields": {
+    "data_name": "not_formality",
+    "title": "Not more!",
+    "content": "<div class=\"content_inner_container\">Unfortunately that isn\\'t quite the end of it for different way to say **not** in Japanese! It is important to note that the <span class=\"blue_text\">**\u3058\u3083**</span> part of <span class=\"blue_text\">**\u3058\u3083\u3042\u308a\u307e\u305b\u3093**</span> and <span class=\"blue_text\">**\u3058\u3083\u306a\u3044**</span> is actually a shortening of <span class=\"blue_text\">**\u3067\u306f**</span>\u21b5\u21b5This means that both of the ways we just learnt to express **not** can also be formed as the following\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\u3067\u306f\u3042\u308a\u307e\u305b\u3093</p>\u21b5\u21b5<p class=\"text_alone blue_text\">\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\u3067\u306f\u306a\u3044</p>Using <span class=\"blue_text\">**\u3067\u306f**</span> can come across as a bit more formal or bookish, like saying **is not** over **isn\\'t**.\u21b5\u21b5<sup>Note: as with the particle <span class=\"blue_text\">**\u306f**</span>, the <span class=\"blue_text\">**\u306f**</span> in <span class=\"blue_text\">**\u3067\u306f**</span> is pronounced **wa**.</sup></div>",
+    "chunk": 6,
+    "page_no": 2
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 18,
+  "fields": {
+    "data_name": "counting_long",
+    "title": "Hold up there's more...",
+    "content": "<div class=\"content_inner_container\"><p>You might be thinking \\'now I\\'ve learnt to count I can count anything to my heart\\'s content!\\' If only that were the case. Unfortunatly in Japanese, when counting, you always have to use a counter to indicate the type of thing that you are counting, so whereas in English one would just say **\\'Two cats\\'** in Japanese you would have to add the counter word for small animals after the number. Think of this similar to how one would say \\'Two **sheets** of paper\\' or \\'five **bottles** of beer\\'. The main difference between this and Japanese counters being that the Japanese counters cannot be used as nouns on their own.</p></div>",
+    "chunk": 18,
+    "page_no": 3
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 19,
+  "fields": {
+    "data_name": "time",
+    "title": "Telling the Time",
+    "content": "<div class=\"content_inner_container\">Counting time in Japanese is similar to counting anything else, there are counters for both hour and minute.\u21b5\u21b5<TextComparison highlighted={\u3058|\u3075\u3093} text={[[\"~\u3058\", \"o'clock or hour\"], [\"~\u3075\u3093\", \"minutes\"]]}/>Using this we can say that <span class=\"blue_text\">**\u306b\u3058**</span> is **2:00** and <span class=\"blue_text\">**\u308d\u304f\u3058\u306b\u3058\u3085\u3046\u306a\u306a\u3075\u3093**</span> is **6:27**\u21b5\u21b5As with all counting in Japanese however, there are some exceptions as some of the numbers and counters change when paired together. Below are the exceptions for the <span class=\"blue_text\">**\u3058**</span> counter:\u21b5\u21b5<TextComparison highlighted={\u3057\u3061\u3058|\u304d\u3085\u3046|\u304f\u3058| \u304f|\u3088\u3058|\u3075\u3093|\u3088\u3093|\u3093} text={[[\"\u3088\u3058 (drops the \u3093 from \u3088\u3093)\", \"4:00\"], [\"\u3057\u3061\u3058 (Common form of 7 for hour)\", \"7:00\"], [\"\u304f\u3058 (\u304d\u3085\u3046 goes to  \u304f)\", \"9:00\"]]}/>The exceptions for the minute counter <span class=\"blue_text\">**\u3075\u3093**</span> are here:\u21b5\u21b5<TextComparison highlighted={\u3044\u3063\u3077\u3093|\u3055\u3093\u3077\u3093|\u308d\u3063\u3077\u3093|\u306a\u306a\u3075\u3093|\u306f\u3063\u3077\u3093|\u3058\u3085\u3046\u3063\u3077\u3093} text={[[\"\u3044\u3063\u3077\u3093\", \"1 minute\"], [\"\u3055\u3093\u3077\u3093\", \"3 Minutes\"], [\"\u308d\u3063\u3077\u3093\", \"6 Minutes\"], [\"\u306a\u306a\u3075\u3093 (Common form of 7 for minute)\", \"7 Minutes\"], [\"\u306f\u3063\u3077\u3093\", \"8 Minutes\"], [\"\u3058\u3085\u3046\u3063\u3077\u3093\", \"10 Minutes\"]]}/>As you can see, that is a lot of irregularities! don\\'t worry too much about memorising them all right off the bat, as you use them more and more they\\'ll come more and more naturally as the changes are often made to make the pronunciation easier. Try saying them out loud to get yourself used to the difference in pronunciation.</div>",
+    "chunk": 10,
+    "page_no": 1
+  }
+},
+{
+  "model": "pages.page",
+  "pk": 20,
+  "fields": {
+    "data_name": "time_2",
+    "title": "Some Extra Vocab",
+    "content": "<div class=\"content_inner_container\">There is some other extra vocabulary to help express time:\u21b5\u21b5<TextComparison highlighted={\u306f\u3093|\u3054\u305c\u3093|\u3054\u3054|\u3054\u308d} text={[[\"~\u306f\u3093\", \"Half Past\"], [\"\u3054\u305c\u3093\", \"AM\"], [\"\u3054\u3054\", \"PM\"], [\"~\u3054\u308d\", \"about ...\"]]}/>\u21b5\u21b5In use:\u21b5\u21b5<SelectText text={[[\"\u3054\u305c\u3093\", \"\u304f\u3058\", \"\u306f\u3093\", \"\u3054\u308d\", \"\u3067\u3059\"], [\"AM\", \"9:00\", \"half past\", \"about\", \"it is\"]]} /></div>",
+    "chunk": 10,
+    "page_no": 2
   }
 }
 ]

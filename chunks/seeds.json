@@ -41,7 +41,7 @@
   "fields": {
     "name": "This, That and the Other Thing",
     "data_name": "this-that-and-the-other-thing",
-    "order": 1,
+    "order": 3,
     "data_type": "lesson",
     "external_link": "",
     "chapter": 2
@@ -53,10 +53,10 @@
   "fields": {
     "name": "Also/As Well",
     "data_name": "also-as-well",
-    "order": 2,
+    "order": 3,
     "data_type": "lesson",
     "external_link": "",
-    "chapter": 2
+    "chapter": 3
   }
 },
 {
@@ -65,7 +65,7 @@
   "fields": {
     "name": "Not!",
     "data_name": "not",
-    "order": 3,
+    "order": 5,
     "data_type": "lesson",
     "external_link": "",
     "chapter": 2
@@ -77,7 +77,7 @@
   "fields": {
     "name": "Sentence Enders",
     "data_name": "sentence-enders",
-    "order": 4,
+    "order": 6,
     "data_type": "lesson",
     "external_link": "",
     "chapter": 2
@@ -113,10 +113,10 @@
   "fields": {
     "name": "Time",
     "data_name": "time",
-    "order": 3,
+    "order": 4,
     "data_type": "lesson",
     "external_link": "",
-    "chapter": 3
+    "chapter": 2
   }
 },
 {
@@ -177,6 +177,30 @@
     "data_type": "vocab",
     "external_link": "",
     "chapter": 1
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 17,
+  "fields": {
+    "name": "Vocab",
+    "data_name": "jp_vocab_2",
+    "order": 1,
+    "data_type": "vocab",
+    "external_link": "",
+    "chapter": 2
+  }
+},
+{
+  "model": "chunks.chunk",
+  "pk": 18,
+  "fields": {
+    "name": "Counting",
+    "data_name": "counting",
+    "order": 2,
+    "data_type": "lesson",
+    "external_link": "",
+    "chapter": 2
   }
 }
 ]
