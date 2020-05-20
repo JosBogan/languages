@@ -19,6 +19,7 @@ import './styles/classroom/Questions.css'
 import Classroom from './components/classroom/Classroom'
 import HubContainer from './components/hub/HubContainer'
 import SecureRoute from './components/auth/SecureRoute'
+// import ClassroomModuleNotFound from './components/errors/ClassroomModuleNotFound'
 
 
 
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <SecureRoute path="/cr/:subject_name/:module_name/" component={Classroom}/>
+        {/* <SecureRoute path="/x/*" component={ClassroomModuleNotFound}/> */}
         <Route path="/" component={HubContainer}/>
       </Switch>
     </BrowserRouter>

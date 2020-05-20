@@ -24,7 +24,7 @@ class SubjectModules extends React.Component {
       const res = await axios.get(`/api/subjects/${data_name}/`)
       this.setState({ modules: res.data.modules, subject: res.data.data_name })
     } catch (err) {
-      console.log(err)
+      if (err.response.data.message === 'Not Found') this.props.history.push('/x/notfound')
     }
   }
 

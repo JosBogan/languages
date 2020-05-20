@@ -13,6 +13,7 @@ import Register from '../auth/Register'
 import UserPage from './UserPage'
 import SecureRoute from '../auth/SecureRoute'
 import UnSecureRoute from '../auth/UnSecureRoute'
+import ClassroomModuleNotFound from '../errors/ClassroomModuleNotFound'
 
 import Auth from '../../lib/auth'
 
@@ -56,6 +57,7 @@ class HubContainer extends React.Component {
             <UnSecureRoute path="/login" component={Login}/>
             <UnSecureRoute path="/register" component={Register}/> 
             <Route path="/subjects" component={SubjectIndex}/>
+            <SecureRoute path="/x/*" component={ClassroomModuleNotFound}/>
             {!this.state.user ?
             <Route path="/:data_name/" component={SubjectModules}/> :
             <Route             

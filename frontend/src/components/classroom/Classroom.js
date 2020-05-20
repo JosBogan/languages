@@ -62,10 +62,12 @@ class Classroom extends React.Component {
     try {
       const res = await axios.get(`/api/modules/${data_name}`)
       this.setState({ module: res.data })
+      this.getUser()
     } catch (err) {
-      console.log(err)
+      // this.getUser()
+      if (err.response.data.message === 'Not Found') this.props.history.push('/x/notfound')
     }
-    this.getUser()
+    // this.getUser()
   }
 
   getUser = async () => {
@@ -87,7 +89,7 @@ class Classroom extends React.Component {
 
   render() {
     if (!this.state.user) return null
-    if (!this.state.module) return null
+    // if (!this.state.module) return null
     if (
       !this.props.location.fromProps && 
       !this.state.user.progression.module_progress.find(module => this.state.module.id === module.module_id)
