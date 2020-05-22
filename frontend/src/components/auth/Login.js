@@ -20,7 +20,8 @@ class Login extends React.Component {
     focus: {
       email: null,
       password: null
-    }
+    },
+    error: null
   }
 
   onSubmit = async (event) => {
@@ -31,7 +32,11 @@ class Login extends React.Component {
       // this.props.getUser()
       this.props.history.push('/')
     } catch (err) {
-      console.log(err)
+      console.log(err.response.data.message)
+      if (err.response.data.message === 'Invalid Credentials') {
+        console.log('here')
+        this.setState({ error: err.response.data.message })
+      }
     }
   }
 
@@ -42,7 +47,7 @@ class Login extends React.Component {
 
   onChange = (event) => {
     const data = { ...this.state.data, [event.target.name]: event.target.value }
-    this.setState({ data })
+    this.setState({ data, error: null })
   }
 
   handleInputFocus = (event) => {
@@ -90,6 +95,7 @@ class Login extends React.Component {
               type="password"
               />
             </div>
+          {this.state.error && <p className="auth_error_text">{this.state.error}</p>}
           </div>
           <div className="auth_submit_container">
             <button typeof="submit" className="auth_submit_button">Enter!</button>

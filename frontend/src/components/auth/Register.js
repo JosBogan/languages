@@ -21,7 +21,14 @@ class Register extends React.Component {
       email: null, 
       password: null, 
       username: null, 
-      password_confirmation: null }
+      password_confirmation: null 
+    },
+    errors: {
+      email: null, 
+      password: null, 
+      username: null, 
+      password_confirmation: null 
+    }
   }
 
   onSubmit = async (event) => {
@@ -31,7 +38,12 @@ class Register extends React.Component {
       console.log(res.data)
       this.props.history.push('/login')
     } catch (err) {
-      console.log(err)
+      const errors = { ...err.response.data }
+      for (err in errors) {
+        err = err[0]
+      }
+      this.setState({ errors })
+      // console.log(err.response.data)
     }
   }
 
@@ -41,9 +53,15 @@ class Register extends React.Component {
   }
 
   handleInputFocus = (event) => {
+    const errors = {
+      email: null, 
+      password: null, 
+      username: null, 
+      password_confirmation: null 
+    }
     const focus = { email: null, password: null, username: null, password_confirmation: null }
     focus[event.target.name] = true
-    this.setState({ focus })
+    this.setState({ focus, errors })
   }
 
   handleInputBlur = (event) => {
@@ -71,6 +89,7 @@ class Register extends React.Component {
               onBlur={this.handleInputBlur}
               />
             </div>
+            {this.state.errors.username && <div className="auth_error_text">{this.state.errors.username}</div>}
           </div>
           <div className="auth_input_container">
             <label className={`auth_input_label ${this.state.focus.email || this.state.data.email ? 'auth_input_focus' : ''}`}>Email</label>
@@ -83,6 +102,7 @@ class Register extends React.Component {
               onBlur={this.handleInputBlur}
               />
             </div>
+            {this.state.errors.email && <div className="auth_error_text">{this.state.errors.email}</div>}
           </div>
           <div className="auth_input_container">
             <label className={`auth_input_label ${this.state.focus.password || this.state.data.password ? 'auth_input_focus' : ''}`}>Password</label>
@@ -96,6 +116,7 @@ class Register extends React.Component {
               type="password"
               />
             </div>
+            {this.state.errors.password && <div className="auth_error_text">{this.state.errors.password}</div>}
           </div>
           <div className="auth_input_container">
             <label className={`auth_input_label ${this.state.focus.password_confirmation || this.state.data.password_confirmation ? 'auth_input_focus' : ''}`}>Password Confirmation</label>
@@ -109,6 +130,7 @@ class Register extends React.Component {
               type="password"
               />
             </div>
+            {this.state.errors.password_confirmation && <div className="auth_error_text">{this.state.errors.password_confirmation}</div>}
           </div>
           <div className="auth_submit_container">
             <button typeof="submit" className="auth_submit_button">Submit</button>

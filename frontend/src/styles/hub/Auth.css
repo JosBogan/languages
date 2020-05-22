@@ -1,6 +1,6 @@
 .auth_container {
   width: 500px;
-  margin: 150px auto;
+  margin: 100px auto;
   background-color: whitesmoke;
   border: 1px solid #dfdfdf;
   border-radius: 10px;
@@ -13,7 +13,8 @@
 }
 
 .auth_input_container {
-  margin: 20px 0;
+  margin: 40px 0;
+  position: relative;
 }
 
 .auth_input {
@@ -71,4 +72,12 @@
   /* float: right; */
   /* flex: 1; */
   justify-self: flex-end;
+}
+
+.auth_error_text {
+  color: var(--red);
+  /* margin-bottom: 20px; */
+  position: absolute;
+  bottom: -30px;
+  right: 0;
 }
