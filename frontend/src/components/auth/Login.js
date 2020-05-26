@@ -33,10 +33,10 @@ class Login extends React.Component {
       this.props.history.push('/')
     } catch (err) {
       console.log(err.response.data.message)
-      if (err.response.data.message === 'Invalid Credentials') {
-        console.log('here')
+      // if (err.response.data.message === 'Invalid Credentials') {
+        // console.log(err.response.data.message)
         this.setState({ error: err.response.data.message })
-      }
+      // }
     }
   }
 
