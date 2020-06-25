@@ -2,6 +2,9 @@ import React from 'react'
 import axios from 'axios'
 
 import Alphabet from '../japanese/Alphabet'
+import Test from '../japanese/Test'
+
+import { Switch, Route } from 'react-router-dom'
 
 class SoloChapter extends React.Component {
 
@@ -33,7 +36,23 @@ class SoloChapter extends React.Component {
     if (!this.state.data) return null
     return (
       <div className="content_inner">
-        <Alphabet alphabet={this.state.data}/>
+        <Switch>
+          <Route 
+            path="/cr/:subject_name/:module_name/:chapter_name/"
+            render={(props) => (
+              <Alphabet {...props} 
+                alphabet={this.state.data}
+              />)
+            }/>
+          <Route 
+            path="/cr/:subject_name/:module_name/:chapter_name/test"
+            render={(props) => (
+              <Test {...props} 
+                alphabet={this.state.data}
+              />)
+            }/>
+        </Switch>
+        {/* <Alphabet alphabet={this.state.data}/> */}
       </div>
     )
   }

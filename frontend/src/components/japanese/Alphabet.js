@@ -27,6 +27,7 @@ class Alphabet extends React.Component {
       return newAcc
     }, [])
     this.setState({ alphabet: rows })
+    console.log(this.props.location.pathname)
   }
 
   handleRowSelect = (event) => {
@@ -87,7 +88,12 @@ class Alphabet extends React.Component {
             )
           })}
         </div>
-        {Object.keys(this.state.rowsSelected).length !== 0 && <Next rowsSelected={this.state.rowsSelected}/>}
+        {Object.keys(this.state.rowsSelected).length !== 0 && 
+          <Next 
+            path={this.props.location.pathname + 'test'}
+            // rowsSelected={this.state.rowsSelected}
+          />
+        }
       </div>
     )
   }

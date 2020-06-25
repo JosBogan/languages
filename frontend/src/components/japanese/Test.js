@@ -27,6 +27,7 @@ class Test extends React.Component {
   }
 
   componentDidMount() {
+    console.log('here')
     const letters = Object.values(this.props.history.location.state.rowsSelected).flat()
     const currentLetter = letters[this.letterRandomiser(letters)]
     // const lang = this.languageRandomiser()
