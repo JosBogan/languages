@@ -5,8 +5,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "I am a student",
     "question_type": "direct",
+    "order": 1,
     "answer": "\u308f\u305f\u3057\u306f\u304c\u304f\u305b\u3044\u3067\u3059",
     "chunk": 1
   }
@@ -17,8 +19,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Shizuka is Japanese",
     "question_type": "direct",
+    "order": 2,
     "answer": "\u3057\u305a\u304b\u306f\u306b\u307b\u3093\u3058\u3093\u3067\u3059",
     "chunk": 1
   }
@@ -29,9 +33,11 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
-    "question": "I am 27 years old",
+    "extra": "",
+    "question": "He is a teacher",
     "question_type": "direct",
-    "answer": "\u308f\u305f\u3057\u306f\u306b\u3058\u3085\u3046\u306a\u306a\u3055\u3044\u3067\u3059",
+    "order": 3,
+    "answer": "\u304b\u308c\u306f\u305b\u3093\u305b\u3044\u3067\u3059",
     "chunk": 1
   }
 },
@@ -41,8 +47,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Are you a student?",
     "question_type": "direct",
+    "order": 1,
     "answer": "\u304c\u304f\u305b\u3044\u3067\u3059\u304b",
     "chunk": 15
   }
@@ -53,8 +61,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Is it Haruka's book?",
     "question_type": "direct",
+    "order": 2,
     "answer": "\u306f\u308b\u304b\u306e\u307b\u3093\u3067\u3059\u304b",
     "chunk": 15
   }
@@ -65,8 +75,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Is Takeshi a teacher?",
     "question_type": "direct",
+    "order": 1,
     "answer": "\u305f\u3051\u3057\u306f\u305b\u3093\u305b\u3044\u3067\u3059\u304b",
     "chunk": 2
   }
@@ -77,8 +89,10 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Is it an umbrella?",
     "question_type": "direct",
+    "order": 2,
     "answer": "\u304b\u3055\u3067\u3059\u304b",
     "chunk": 2
   }
@@ -89,10 +103,194 @@
   "fields": {
     "instruction_type": "translate",
     "specific_instruction": "",
+    "extra": "",
     "question": "Lawyer's book",
     "question_type": "direct",
+    "order": 1,
     "answer": "\u3079\u3093\u3054\u3057\u306e\u307b\u3093",
     "chunk": 3
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 9,
+  "fields": {
+    "instruction_type": "fill",
+    "specific_instruction": "I am a lawyer",
+    "extra": "[{ \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }]",
+    "question": "[{ \"value\": \"\u3067\u3059\", \"i\": 4}, { \"value\": \"\u306f\", \"i\": 2}, { \"value\": \"\u308f\u305f\u3057\", \"i\": 1}, { \"value\": \"\u3079\u3093\u3054\u3057\", \"i\": 3}]",
+    "question_type": "multiple_choice",
+    "order": 2,
+    "answer": "\u308f\u305f\u3057\u306f\u3079\u3093\u3054\u3057\u3067\u3059",
+    "chunk": 13
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 10,
+  "fields": {
+    "instruction_type": "fill",
+    "specific_instruction": "",
+    "extra": "[{ \"value\" : \"\", \"user\": true }, { \"value\": \"-\", \"user\": false }, { \"value\": \"\", \"user\": true }, { \"value\": \"-\", \"user\": false }, { \"value\": \"\", \"user\": true }]",
+    "question": "[{ \"value\": \"Subject\", \"i\": 1}, { \"value\": \"Verb\", \"i\": 2}, { \"value\": \"Object\", \"i\": 3}]",
+    "question_type": "multiple_choice",
+    "order": 1,
+    "answer": "Subject - Object - Verb",
+    "chunk": 13
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 11,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u304b\u306e\u3058\u3087\u306f\u3044\u3057\u3083\u3067\u3059",
+    "question_type": "direct",
+    "order": 4,
+    "answer": "She is a doctor",
+    "chunk": 1
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 12,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u308f\u305f\u3057\u306f\u30c9\u30a4\u30c4\u3058\u3093\u3067\u3059",
+    "question_type": "direct",
+    "order": 5,
+    "answer": "I am german",
+    "chunk": 1
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 13,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "Are you American?",
+    "question_type": "direct",
+    "order": 3,
+    "answer": "\u30a2\u30e1\u30ea\u30ab\u3058\u3093\u3067\u3059\u304b",
+    "chunk": 2
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 14,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u304d\u305f\u306e\u306f\u305b\u3093\u305b\u3044\u3067\u3059\u304b",
+    "question_type": "direct",
+    "order": 4,
+    "answer": "Is Kitano a Teacher",
+    "chunk": 2
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 15,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u3057\u305a\u304b\u306f\u3044\u3057\u3083\u3067\u3059\u304b",
+    "question_type": "direct",
+    "order": 5,
+    "answer": "Is Shizuka a doctor",
+    "chunk": 2
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 16,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "My Umbrella",
+    "question_type": "direct",
+    "order": 2,
+    "answer": "\u308f\u305f\u3057\u306e\u304b\u3055",
+    "chunk": 3
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 17,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "Shizuka's School",
+    "question_type": "direct",
+    "order": 3,
+    "answer": "\u3057\u305a\u304b\u306e\u304c\u3063\u3053\u3046",
+    "chunk": 3
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 18,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u3057\u305a\u304b\u306f\u3044\u305a\u307f\u306e\u305b\u3093\u305b\u3044\u3067\u3059",
+    "question_type": "direct",
+    "order": 4,
+    "answer": "Shizuka is Izumi's teacher",
+    "chunk": 3
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 19,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "\u30a4\u30ae\u30ea\u30b9\u306e\u304c\u3063\u3053\u3046\u306e\u305b\u3093\u305b\u3044",
+    "question_type": "direct",
+    "order": 5,
+    "answer": "English school teacher",
+    "chunk": 3
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 20,
+  "fields": {
+    "instruction_type": "translate",
+    "specific_instruction": "",
+    "extra": "",
+    "question": "Are you a Japanese teacher?",
+    "question_type": "direct",
+    "order": 3,
+    "answer": "\u306b\u307b\u3093\u3054\u306e\u305b\u3093\u305b\u3044\u3067\u3059\u304b",
+    "chunk": 15
+  }
+},
+{
+  "model": "questions.question",
+  "pk": 21,
+  "fields": {
+    "instruction_type": "fill",
+    "specific_instruction": "She is my doctor",
+    "extra": "[{ \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }, { \"value\" : \"\", \"user\": true }]",
+    "question": "[{ \"value\": \"\u308f\u305f\u3057\", \"i\": 4}, { \"value\": \"\u3044\u3057\u3083\", \"i\": 2}, { \"value\": \"\u306e\", \"i\": 6}, { \"value\": \"\u304b\u306e\u3058\u3087\", \"i\": 1}, { \"value\": \"\u3067\u3059\", \"i\": 3}, { \"value\": \"\u306f\", \"i\": 5}]",
+    "question_type": "multiple_choice",
+    "order": 5,
+    "answer": "\u304b\u306e\u3058\u3087\u306f\u308f\u305f\u3057\u306e\u3044\u3057\u3083\u3067\u3059",
+    "chunk": 15
   }
 }
 ]
