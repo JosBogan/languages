@@ -20,7 +20,7 @@ class Question(models.Model):
     extra = models.CharField(max_length=200, blank=True)
     question = models.CharField(max_length=200)
     question_type = models.CharField(max_length=50, choices=QUESTION_TYPE_CHOICES)
-    order = models.IntegerField(blank=True)
+    order = models.IntegerField(blank=True, null=True)
     answer = models.CharField(max_length=200)
     chunk = models.ForeignKey('chunks.Chunk', on_delete=models.CASCADE, related_name='questions')
 
