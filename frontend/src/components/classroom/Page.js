@@ -19,6 +19,7 @@ class Page extends React.Component {
     try {
       const res = await axios.get(`/api/chunks/${this.props.match.params.chunk_name}`)
       // console.log(res.data)
+      console.log(res.data)
       this.setState({ chunk: res.data })
     } catch (err){
       console.log(err)

@@ -25,5 +25,5 @@ urlpatterns = [
     path('api/modules/', include('modules.urls')),
     path('api/chunks/', include('chunks.urls')),
     path('api/auth/', include('jwt_auth.urls')),
-    re_path(r'^.*$', index), # <-- have this come last using re path.
+    path('', index),
 ]
